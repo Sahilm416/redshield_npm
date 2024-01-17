@@ -5,8 +5,7 @@ on:
     branches:
       - "main"
 
-concurrency: ${{ github.workflow }}-${{ github.ref}}
-
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   build:
@@ -34,4 +33,6 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-           publish: pnpm run build
+          publish: pnpm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
