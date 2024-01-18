@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     /* Language and Environment */
     "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
 
@@ -13,6 +14,10 @@
     "strict": true /* Enable all strict type-checking options. */,
 
     "noUncheckedIndexedAccess": true /* Add 'undefined' to a type when accessed using an index. */,
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
   }
 }
