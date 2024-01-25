@@ -13,7 +13,7 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-export default function RegisterCard() {
+export default function RegisterCard({project_name}:{project_name:string}) {
   const [formCount, setFormCount] = useState<1 | 2 | 3>(1);
   const [email, setEmail] = useState<string>("");
 
@@ -21,7 +21,7 @@ export default function RegisterCard() {
     <>
       <Card className=" dark:bg-gray-900/20 bg-white px-2 h-auto shadow-lg rounded-none">
         <CardHeader>
-          <CardTitle>Register to Redshield</CardTitle>
+          <CardTitle>Register to {project_name}</CardTitle>
           <CardDescription>redis based auth</CardDescription>
         </CardHeader>
         {formCount === 1 ? (

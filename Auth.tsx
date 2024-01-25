@@ -1,27 +1,37 @@
-"use client";
 import "./output.css";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import LoginCard from "./components/LoginCard";
 import RegisterCard from "./components/RegisterCard";
 import React from "react";
+import { getProject } from "./actions/auth";
 
-export default function TestPage() {
+export default async function TestPage() {
+  const res = await getProject();
+  if (!res?.status) {
+    return (
+      <div>
+        <p>{res?.message}</p>
+      </div>
+    );
+  }
   return (
-    <Tabs className=" w-[90vw] max-w-[400px]" defaultValue="login">
-      <TabsList className="grid dark:bg-slate-900 w-full grid-cols-2 rounded-none">
-        <TabsTrigger className=" rounded-none" value="login">
-          Login
-        </TabsTrigger>
-        <TabsTrigger className=" rounded-none" value="register">
-          Register
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value="login">
-        <LoginCard />
-      </TabsContent>
-      <TabsContent value="register">
-        <RegisterCard />
-      </TabsContent>
-    </Tabs>
+    <div className="flex flex-col items-center mb-auto mt-[100px]">
+      <Tabs className=" w-[90vw] max-w-[400px]" defaultValue="login">
+        <TabsList className="grid dark:bg-slate-900 w-full grid-cols-2 rounded-none">
+          <TabsTrigger className=" rounded-none" value="login">
+            Login
+          </TabsTrigger>
+          <TabsTrigger className=" rounded-none" value="register">
+            Register
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="login">
+          <LoginCard project_name={res.project_name} />
+        </TabsContent>
+        <TabsContent value="register">
+          <RegisterCard project_name={res.project_name} />
+        </TabsContent>
+      </Tabs>
+    </div>
   );
 }
