@@ -21,9 +21,10 @@ import { resetPassword } from "../actions/auth";
 export default function LoginCard({ project_name }: { project_name: string }) {
   const [loading, setLoading] = useState<boolean>(false);
   const [forgotPassword, setForgotPassword] = useState<boolean>(false);
-  const [response, setResponse] = useState<{ status: boolean; message: string }>(
-    { status: true, message: "" }
-  );
+  const [response, setResponse] = useState<{
+    status: boolean;
+    message: string;
+  }>({ status: true, message: "" });
 
   const router = useRouter();
   const fakeLoad = async () => {
@@ -33,12 +34,14 @@ export default function LoginCard({ project_name }: { project_name: string }) {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
     await fakeLoad();
-    setResponse({status: true, message:""}) 
+    setResponse({ status: true, message: "" });
     setLoading(true);
     const res = await LoginUser({ email: email, password: password });
     setResponse({ status: res.status, message: res.message });
-
     setLoading(false);
+    if (response.status) {
+      return router.refresh();
+    }
   };
   return (
     <>
@@ -54,7 +57,11 @@ export default function LoginCard({ project_name }: { project_name: string }) {
             <CardContent className="flex flex-col gap-3">
               <Label htmlFor="email">Email</Label>
               <Input
-                className={`rounded-none ${response.status ? "border-[#EBEBEB] dark:border-[#1F1F1F]" : "border-2 border-red-700"}`}
+                className={`rounded-none ${
+                  response.status
+                    ? "border-[#EBEBEB] dark:border-[#1F1F1F]"
+                    : "border-2 border-red-700"
+                }`}
                 autoFocus
                 placeholder="enter email"
                 type="email"
@@ -64,7 +71,11 @@ export default function LoginCard({ project_name }: { project_name: string }) {
               />
               <Label htmlFor="password">Password</Label>
               <Input
-                className= {`rounded-none  ${response.status ? "border-[#EBEBEB] dark:border-[#1F1F1F]" : "border-2 border-red-700"}`}
+                className={`rounded-none  ${
+                  response.status
+                    ? "border-[#EBEBEB] dark:border-[#1F1F1F]"
+                    : "border-2 border-red-700"
+                }`}
                 placeholder="enter password"
                 type="password"
                 name="password"

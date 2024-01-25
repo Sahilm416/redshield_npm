@@ -3,7 +3,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import LoginCard from "./components/LoginCard";
 import RegisterCard from "./components/RegisterCard";
 import React from "react";
-import { getProject } from "./actions/auth";
+import Link from "next/link"
+import { getProject, getSession } from "./actions/auth";
 
 export default async function TestPage() {
   const res = await getProject();
@@ -13,6 +14,15 @@ export default async function TestPage() {
         <p>{res?.message}</p>
       </div>
     );
+  }
+  const session = await getSession();
+  if(session.status){
+     return (
+      <div className="flex flex-col justify-center items-center">
+           <p className="text-3xl ">Already Logged In</p>
+          <Link className="p-5 rounded-md" href={'/'}>Back to home</Link>
+      </div>
+     )
   }
   return (
     <div className="flex flex-col items-center mb-auto mt-[100px]">
