@@ -5,7 +5,6 @@ import {
   Card,
   CardHeader,
   CardTitle,
-  CardDescription,
   CardFooter,
   CardContent,
 } from "./ui/card";
@@ -20,10 +19,7 @@ import { useRouter } from "next/navigation";
 export default function LoginCard({ project_name }: { project_name: string }) {
   const [loading, setLoading] = useState<boolean>(false);
   const [forgotPassword, setForgotPassword] = useState<boolean>(false);
-  const [response, setResponse] = useState<{
-    status: boolean;
-    message: string;
-  }>({ status: true, message: "" });
+
 
   const router = useRouter();
   const fakeLoad = async () => {
@@ -33,7 +29,6 @@ export default function LoginCard({ project_name }: { project_name: string }) {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
     await fakeLoad();
-    setResponse({ status: true, message: "" });
     setLoading(true);
     const res = await LoginUser({ email: email, password: password });
     if (res.status) {
