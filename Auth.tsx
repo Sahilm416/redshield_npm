@@ -17,10 +17,10 @@ export default function TestPage() {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="login">
-          <LoginCard project_name={"demo"} />
+          <LoginCard project_name={"test"} />
         </TabsContent>
         <TabsContent value="register">
-          <RegisterCard project_name={"demo"} />
+          <RegisterCard project_name={"test"} />
         </TabsContent>
       </Tabs>
     </div>
