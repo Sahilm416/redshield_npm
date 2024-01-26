@@ -16,7 +16,7 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import { Oval } from "react-loader-spinner";
 
 import { useRouter } from "next/navigation";
-import { resetPassword } from "../actions/auth";
+
 
 export default function LoginCard({ project_name }: { project_name: string }) {
   const [loading, setLoading] = useState<boolean>(false);
@@ -51,8 +51,7 @@ export default function LoginCard({ project_name }: { project_name: string }) {
         <Card className=" dark:bg-gray-900/20 bg-white p-2 shadow-lg rounded-none border-[#EBEBEB] dark:border-[#1F1F1F]">
           <form action={sendData}>
             <CardHeader>
-              <CardTitle>Login to Redshield</CardTitle>
-              <CardDescription>redis based auth</CardDescription>
+              <CardTitle>Login to {project_name}</CardTitle>
             </CardHeader>
             <CardContent className="flex flex-col gap-3">
               <Label htmlFor="email">Email</Label>

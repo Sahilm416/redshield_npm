@@ -35,6 +35,10 @@ export const getProject = async () => {
     };
   } catch (error) {
     console.log(error);
+    return {
+      status: false,
+      message: "something went wrong",
+    }
   }
 };
 
