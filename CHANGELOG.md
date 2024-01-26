@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.2.2
+
+### Patch Changes
+
+- d7c033c: added register feature
+
 ## 0.2.1
 
 ### Patch Changes
