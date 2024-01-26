@@ -4,6 +4,7 @@ import LoginCard from "./components/LoginCard";
 import RegisterCard from "./components/RegisterCard";
 import React from "react";
 import { getProject } from "./actions/auth";
+import { Toaster } from "sonner";
 
 export default async function TestPage() {
   const project = await getProject();
@@ -36,6 +37,7 @@ export default async function TestPage() {
           <RegisterCard project_name={project.project_name} />
         </TabsContent>
       </Tabs>
+      <Toaster richColors position="bottom-right"/>
     </div>
   );
 }

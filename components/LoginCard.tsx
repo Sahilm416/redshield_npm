@@ -14,9 +14,8 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import React, { Dispatch, SetStateAction, useState } from "react";
 import { Oval } from "react-loader-spinner";
-
+import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-
 
 export default function LoginCard({ project_name }: { project_name: string }) {
   const [loading, setLoading] = useState<boolean>(false);
@@ -37,11 +36,13 @@ export default function LoginCard({ project_name }: { project_name: string }) {
     setResponse({ status: true, message: "" });
     setLoading(true);
     const res = await LoginUser({ email: email, password: password });
-    setResponse({ status: res.status, message: res.message });
-    setLoading(false);
-    if (response.status) {
-      return router.refresh();
+    if (res.status) {
+      toast.success(res.message);
+      router.refresh();
+    } else {
+      toast.error(res.message);
     }
+    setLoading(false);
   };
   return (
     <>
@@ -56,11 +57,7 @@ export default function LoginCard({ project_name }: { project_name: string }) {
             <CardContent className="flex flex-col gap-3">
               <Label htmlFor="email">Email</Label>
               <Input
-                className={`rounded-none ${
-                  response.status
-                    ? "border-[#EBEBEB] dark:border-[#1F1F1F]"
-                    : "border-2 border-red-700"
-                }`}
+                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-none"
                 autoFocus
                 placeholder="enter email"
                 type="email"
@@ -70,24 +67,13 @@ export default function LoginCard({ project_name }: { project_name: string }) {
               />
               <Label htmlFor="password">Password</Label>
               <Input
-                className={`rounded-none  ${
-                  response.status
-                    ? "border-[#EBEBEB] dark:border-[#1F1F1F]"
-                    : "border-2 border-red-700"
-                }`}
+                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-none"
                 placeholder="enter password"
                 type="password"
                 name="password"
                 id="password"
                 required
               />
-              <p
-                className={`text-sm mb-0 text-center h-[5px] font-semibold ${
-                  response.status ? "text-green-700" : "text-red-700"
-                }`}
-              >
-                {response.message}
-              </p>
             </CardContent>
             <CardFooter className="flex-col gap-2 pb-2">
               <Button
