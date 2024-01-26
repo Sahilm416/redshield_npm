@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.2.1
+
+### Patch Changes
+
+- e097a33: fix for server component
+
 ## 0.2.0
 
 ### Minor Changes
