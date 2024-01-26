@@ -1,5 +1,4 @@
 "use server";
-import { setCookie } from "cookies-next";
 import { cookies } from "next/headers";
 import { getEnv } from "./auth";
 
@@ -52,11 +51,12 @@ export const setToken = async ({ token }: { token: string }) => {
   try {
     const date = new Date();
     date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
-    const cookie = setCookie("_auth_token", token, {
-      cookies,
+    const store = cookies();
+    store.set("_auth_token", token, {
       expires: date,
       httpOnly: true,
       sameSite: true,
+      priority: "high",
     });
   } catch (error) {
     console.log(error);

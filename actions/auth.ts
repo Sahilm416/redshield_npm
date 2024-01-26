@@ -1,6 +1,4 @@
 "use server";
-
-import { deleteCookie, getCookie } from "cookies-next";
 import { cookies } from "next/headers";
 
 export const getEnv = async () => {
@@ -67,7 +65,9 @@ export const verifyJWT = async ({ token }: { token: string | undefined }) => {
 };
 
 export const getSession = async () => {
-  const token = getCookie("_auth_token", { cookies });
+  const store = cookies();
+
+  const token = store.get("_auth_token")?.value;
   if (!token) {
     return {
       status: false,
@@ -93,7 +93,8 @@ export const getSession = async () => {
 };
 
 export const LogOut = async () => {
-  const res = deleteCookie("_auth_token", { cookies });
+  const store = cookies();
+  store.delete("_auth_token");
   return {
     status: true,
     message: "logged out successfully",
