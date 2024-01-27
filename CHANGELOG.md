@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.2.4
+
+### Patch Changes
+
+- 758c8f9: changed the type of auth component
+
 ## 0.2.3
 
 ### Patch Changes
