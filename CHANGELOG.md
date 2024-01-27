@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.2.5
+
+### Patch Changes
+
+- aa604b6: make auth client component
+
 ## 0.2.4
 
 ### Patch Changes
