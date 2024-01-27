@@ -32,6 +32,8 @@ export const getProject = async () => {
     return {
       status: false,
       message: response.message,
+      project_id:"",
+      project_name:""
     };
   } catch (error) {
     console.log(error);

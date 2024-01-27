@@ -22,9 +22,6 @@ export default function LoginCard({ project_name }: { project_name: string }) {
 
 
   const router = useRouter();
-  const fakeLoad = async () => {
-    return;
-  };
   const sendData = async (formData: FormData) => {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;

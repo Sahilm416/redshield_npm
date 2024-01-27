@@ -35,8 +35,8 @@ export const LoginUser = async ({
       });
     }
     return {
-      status: response.status,
-      message: response.message,
+      status: response.status || false,
+      message: response.message || "something went wrong",
     };
   } catch (error) {
     console.log(error);

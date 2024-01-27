@@ -2,7 +2,7 @@
 import React from "react";
 import { LogOut } from "../actions/auth";
 import { useRouter } from "next/navigation";
-export default function LogOutButton({ className }: { className: string }) {
+export default function LogOutButton({ className }: { className?: string }) {
   const router = useRouter();
   return (
     <div>
