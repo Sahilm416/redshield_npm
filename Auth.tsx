@@ -6,7 +6,7 @@ import React from "react";
 import { getProject } from "./actions/auth";
 import { Toaster } from "sonner";
 
-export default async function TestPage() {
+export default async function TestPage():Promise<JSX.Element> {
   const project = await getProject();
   if (!project.status) {
     return (
