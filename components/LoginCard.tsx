@@ -15,11 +15,11 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import { Oval } from "react-loader-spinner";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { sendResetPasswordLink } from "../actions/forgotPassword";
 
 export default function LoginCard({ project_name }: { project_name: string }) {
   const [loading, setLoading] = useState<boolean>(false);
   const [forgotPassword, setForgotPassword] = useState<boolean>(false);
-
 
   const router = useRouter();
   const sendData = async (formData: FormData) => {
@@ -106,10 +106,16 @@ function ForgotPasswordComponent({
   const [resetPassLoading, setResetPassLoading] = useState<boolean>(false);
   const resetPassRequest = async (formData: FormData) => {
     const email = formData.get("email") as string;
-
+    //get current url for reset password endpoint
+    const url = window.location.toString().split("/Auth")[0] as string;
     await fakeLoad();
     setResetPassLoading(true);
-
+    const res = await sendResetPasswordLink({ email: email , url: url });
+    if (res.status) {
+      toast.success(res.message);
+    } else {
+      toast.error(res.message);
+    }
     setResetPassLoading(false);
   };
   return (

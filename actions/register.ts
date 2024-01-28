@@ -4,7 +4,7 @@ import { getEnv } from "./auth";
 import { LoginUser } from "./login";
 
 export const sendCode = async ({ email }: { email: string }) => {
-  const code = Math.floor(100000 + Math.random() * 900000);
+  
   const key = await getEnv();
   try {
     const exist = await fetch(
@@ -42,8 +42,7 @@ export const sendCode = async ({ email }: { email: string }) => {
           Authorization: process.env.RED_KEY!,
         },
         body: JSON.stringify({
-          email: email,
-          code: code,
+          email: email
         }),
       }
     );
@@ -123,8 +122,11 @@ export const registerUser = async (data: {
             }),
           }
         );
-    
+        
         const response = await res.json();
+        if(response.status){
+          await LoginUser({ email: data.email, password: data.password });
+        }
         return {
           status: response.status,
           message: response.message,

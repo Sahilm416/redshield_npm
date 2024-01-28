@@ -14,6 +14,7 @@ export const getProject = async () => {
     const res = await fetch(
       "https://redshield.vercel.app/api/service/getProject",
       {
+        cache: 'no-store',
         headers: {
           Authorization: key,
         },
