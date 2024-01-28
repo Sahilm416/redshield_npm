@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.2.6
+
+### Patch Changes
+
+- 23e5165: added forgot password method
+
 ## 0.2.5
 
 ### Patch Changes
