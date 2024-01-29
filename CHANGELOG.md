@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.0
+
+### Minor Changes
+
+- 33f0ba1: make auth component more fast
+
 ## 0.2.6
 
 ### Patch Changes
