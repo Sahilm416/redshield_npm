@@ -26,6 +26,7 @@ export const getProject = async () => {
     if (response.status) {
       return {
         status: true,
+        message: response.message,
         project_name: response.project_name,
         project_id: response.project_id,
       };
@@ -41,6 +42,8 @@ export const getProject = async () => {
     return {
       status: false,
       message: "something went wrong",
+      project_id:"",
+      project_name:""
     }
   }
 };

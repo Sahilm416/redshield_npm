@@ -1,10 +1,8 @@
-"use client";
 import "./output.css";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 import LoginCard from "./components/LoginCard";
 import RegisterCard from "./components/RegisterCard";
-import React, { useEffect, useState } from "react";
-import { getProject } from "./actions/auth";
+import React from "react";
 import { Toaster } from "sonner";
 
 type projectType = {
@@ -13,25 +11,12 @@ type projectType = {
   project_name: string;
   project_id: string;
 };
-export default function AuthPage() {
-  const [project, setProject] = useState<projectType>({
-    status: true,
-    message: "",
-    project_name: "",
-    project_id: "",
-  });
-  useEffect(() => {
-    const fetchProject = async () => {
-      const res = (await getProject()) as projectType;
-      setProject(res);
-    };
-    fetchProject();
-  }, []);
+export default function AuthPage({ project }: { project: projectType }) {
   if (!project.status) {
     return (
       <div className="w-full h-screen absolute flex justify-center items-center bg-black ">
-        <div className="w-[90vw] max-w-[450px] h-[200px] flex flex-col justify-center items-center border border-blue-700 bg-gray-900/20">
-          <p className="text-2xl text-white">{project.message}</p>
+        <div className="w-[90vw] max-w-[450px] h-[200px] flex flex-col gap-2 justify-center items-center border border-red-700 bg-gray-900/30">
+          <p className="text-2xl text-red-700">{project.message}</p>
           <p className="text-zinc-200">
             visit{" "}
             <a
