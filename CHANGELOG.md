@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.1
+
+### Patch Changes
+
+- 9b1fa43: minor alignment change
+
 ## 0.3.0
 
 ### Minor Changes
