@@ -22,7 +22,7 @@ export const sendResetPasswordLink = async ({
         },
         body: JSON.stringify({
           email: email.trim(),
-          endpoint: `${url}/resetPassword`,
+          endpoint: `${url}/ResetPassword`,
         }),
       }
     );

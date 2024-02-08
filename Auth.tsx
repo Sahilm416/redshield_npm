@@ -33,7 +33,7 @@ export default function AuthPage({ project }: { project: projectType }) {
     );
   }
   return (
-    <div className="flex flex-col items-center mb-auto mt-[100px]">
+    <div>
       <Tabs className=" w-[90vw] max-w-[400px]" defaultValue="login">
         <TabsList className="grid dark:bg-slate-900 w-full grid-cols-2 rounded-none">
           <TabsTrigger className=" rounded-none" value="login">
