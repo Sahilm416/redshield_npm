@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.3
+
+### Patch Changes
+
+- 6bd7579: make some dependencies as dev dependency
+
 ## 0.3.2
 
 ### Patch Changes
