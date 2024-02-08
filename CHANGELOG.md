@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.4
+
+### Patch Changes
+
+- cbe20d0: added readme file
+
 ## 0.3.3
 
 ### Patch Changes
