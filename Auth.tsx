@@ -14,7 +14,7 @@ type projectType = {
 export default function AuthPage({ project }: { project: projectType }) {
   if (!project.status) {
     return (
-      <div className="w-full h-screen absolute flex justify-center items-center bg-black ">
+      <div className="w-full h-screen absolute top-0 right-0 flex justify-center items-center bg-black ">
         <div className="w-[90vw] max-w-[450px] h-[200px] flex flex-col gap-2 justify-center items-center border border-red-700 bg-gray-900/30">
           <p className="text-2xl text-red-700">{project.message}</p>
           <p className="text-zinc-200">
