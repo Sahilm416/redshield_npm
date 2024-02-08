@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.2
+
+### Patch Changes
+
+- 61d7f8b: remove bcrypt as no longer needed
+
 ## 0.3.1
 
 ### Patch Changes
