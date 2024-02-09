@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.5
+
+### Patch Changes
+
+- 8683e89: minor bug fix regarding verification code
+
 ## 0.3.4
 
 ### Patch Changes
