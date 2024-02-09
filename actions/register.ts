@@ -31,7 +31,6 @@ export const sendCode = async ({ email }: { email: string }) => {
       };
     }
 
-    // await db.set(project_id + ":" + email + ":code", code, { ex: 180 });
     const res = await fetch(
       "https://redshield.vercel.app/api/service/sendCode",
       {
@@ -39,7 +38,7 @@ export const sendCode = async ({ email }: { email: string }) => {
         cache: "no-store",
         headers: {
           "Content-Type": "application/json",
-          Authorization: process.env.RED_KEY!,
+          Authorization: key,
         },
         body: JSON.stringify({
           email: email
