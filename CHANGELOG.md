@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.6
+
+### Patch Changes
+
+- 34ab937: add project id for new improved api
+
 ## 0.3.5
 
 ### Patch Changes
