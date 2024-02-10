@@ -11,7 +11,7 @@ import {
 
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
-import { Oval } from "react-loader-spinner";
+import { Loader2 } from "lucide-react";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { registerUser, sendCode, verifyCode } from "../actions/register";
 import { checkPassword } from "../actions/check";
@@ -92,15 +92,7 @@ const Form1 = ({
             className="w-full rounded-none"
           >
             {loading ? (
-              <Oval
-                visible={true}
-                height="25"
-                width="25"
-                strokeWidth="5"
-                color="white"
-                ariaLabel="oval-loading"
-                secondaryColor="black"
-              />
+              <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
             ) : (
               "continue"
             )}
@@ -166,15 +158,7 @@ const Form2 = ({
             className="w-[50%] rounded-none"
           >
             {loading ? (
-              <Oval
-                visible={true}
-                height="25"
-                width="25"
-                strokeWidth="5"
-                color="white"
-                ariaLabel="oval-loading"
-                secondaryColor="black"
-              />
+              <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
             ) : (
               "submit"
             )}
@@ -238,15 +222,7 @@ const Form3 = ({ email , project_id}: { email: string , project_id: string }) =>
             className="w-full rounded-none"
           >
             {loading ? (
-              <Oval
-                visible={true}
-                height="25"
-                width="25"
-                strokeWidth="5"
-                color="white"
-                ariaLabel="oval-loading"
-                secondaryColor="black"
-              />
+              <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
             ) : (
               "create account"
             )}

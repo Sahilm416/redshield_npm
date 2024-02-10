@@ -14,10 +14,10 @@ import { Button } from "./ui/button";
 import { checkPassword } from "../actions/check";
 import { Toaster, toast } from "sonner";
 import { useState } from "react";
-import { Oval } from "react-loader-spinner";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { changePassword } from "../actions/forgotPassword";
+import { Loader2 } from "lucide-react";
 
 type paramTypes = {
   status: boolean;
@@ -97,15 +97,7 @@ const ResetPassComponent = ({ data }: { data: paramTypes }) => {
               className=" w-[150px] rounded-none"
             >
               {loading ? (
-                <Oval
-                  visible={true}
-                  height="25"
-                  width="25"
-                  strokeWidth="5"
-                  color="white"
-                  ariaLabel="oval-loading"
-                  secondaryColor="black"
-                />
+                <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
               ) : (
                 "Save"
               )}
