@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.9
+
+### Patch Changes
+
+- 502a198: fix loader bug
+
 ## 0.3.8
 
 ### Patch Changes
