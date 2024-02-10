@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.7
+
+### Patch Changes
+
+- f5af9ca: back to previous cookie method
+
 ## 0.3.6
 
 ### Patch Changes
