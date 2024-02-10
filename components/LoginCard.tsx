@@ -74,7 +74,7 @@ export default function LoginCard({ project_name , project_id }: { project_name:
                 type="submit"
               >
                 {loading ? (
-                  <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
+                  <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px] origin-center "/>
                 ) : (
                   "login"
                 )}
