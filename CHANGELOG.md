@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.8
+
+### Patch Changes
+
+- 61936a7: remove react-loader-spinner
+
 ## 0.3.7
 
 ### Patch Changes
