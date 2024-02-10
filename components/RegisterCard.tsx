@@ -20,8 +20,10 @@ import { useRouter } from "next/navigation";
 
 export default function RegisterCard({
   project_name,
+  project_id
 }: {
   project_name: string;
+  project_id: string;
 }) {
   const [formCount, setFormCount] = useState<1 | 2 | 3>(1);
   const [email, setEmail] = useState<string>("");
@@ -38,7 +40,7 @@ export default function RegisterCard({
         ) : formCount === 2 ? (
           <Form2 setFormCount={setFormCount} email={email} />
         ) : (
-          <Form3 email={email} />
+          <Form3 email={email} project_id={project_id} />
         )}
       </Card>
     </>
@@ -183,7 +185,7 @@ const Form2 = ({
   );
 };
 
-const Form3 = ({ email }: { email: string }) => {
+const Form3 = ({ email , project_id}: { email: string , project_id: string }) => {
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
 
@@ -195,7 +197,7 @@ const Form3 = ({ email }: { email: string }) => {
       if (validation.status) {
         setLoading(true);
 
-        const res = await registerUser({ email: email, password: pass });
+        const res = await registerUser({ email: email, password: pass , project_id: project_id});
         if (res.status) {
           toast.success(res.message);
           router.push("/");

@@ -44,10 +44,16 @@ export default function AuthPage({ project }: { project: projectType }) {
           </TabsTrigger>
         </TabsList>
         <TabsContent value="login">
-          <LoginCard project_name={project.project_name} />
+          <LoginCard
+            project_name={project.project_name}
+            project_id={project.project_id}
+          />
         </TabsContent>
         <TabsContent value="register">
-          <RegisterCard project_name={project.project_name} />
+          <RegisterCard
+            project_name={project.project_name}
+            project_id={project.project_id}
+          />
         </TabsContent>
       </Tabs>
       <Toaster richColors position="bottom-right" />

@@ -17,7 +17,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { sendResetPasswordLink } from "../actions/forgotPassword";
 
-export default function LoginCard({ project_name }: { project_name: string }) {
+export default function LoginCard({ project_name , project_id }: { project_name: string , project_id: string}) {
   const [loading, setLoading] = useState<boolean>(false);
   const [forgotPassword, setForgotPassword] = useState<boolean>(false);
 
@@ -27,7 +27,7 @@ export default function LoginCard({ project_name }: { project_name: string }) {
     const password = formData.get("password") as string;
     await fakeLoad();
     setLoading(true);
-    const res = await LoginUser({ email: email, password: password });
+    const res = await LoginUser({ email: email, password: password , project_id: project_id });
     if (res.status) {
       toast.success(res.message);
       router.refresh();

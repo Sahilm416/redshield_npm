@@ -102,6 +102,7 @@ export const verifyCode = async ({
 export const registerUser = async (data: {
     email: string;
     password: string;
+    project_id: string;
     profile_picture?: string;
   }) => {
     const key = await getEnv();
@@ -117,14 +118,15 @@ export const registerUser = async (data: {
             },
             body: JSON.stringify({
               email: data.email,
-              password: data.password
+              password: data.password,
+              project_id: data.project_id
             }),
           }
         );
         
         const response = await res.json();
         if(response.status){
-          await LoginUser({ email: data.email, password: data.password });
+          await LoginUser({ email: data.email, password: data.password , project_id: data.project_id});
         }
         return {
           status: response.status,
