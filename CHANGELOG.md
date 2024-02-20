@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.15
+
+### Patch Changes
+
+- ff9b08e: remove webpack config
+
 ## 0.3.14
 
 ### Patch Changes
