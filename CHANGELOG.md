@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.12
+
+### Patch Changes
+
+- 9d6d37d: remove exclude option from webpack config
+
 ## 0.3.11
 
 ### Patch Changes
