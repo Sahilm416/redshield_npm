@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.14
+
+### Patch Changes
+
+- 370e7fe: refactor webpack config
+
 ## 0.3.13
 
 ### Patch Changes
