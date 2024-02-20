@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.10
+
+### Patch Changes
+
+- 1eb4f51: added webpack config for TS files
+
 ## 0.3.9
 
 ### Patch Changes
