@@ -1,0 +1,5 @@
+---
+"redshield": patch
+---
+
+refactor webpack
