@@ -1,9 +1,14 @@
+const path = require('path');
+
 module.exports = {
-  // other webpack configuration options...
+  output: {
+    path: path.join(__dirname, '/dist'),
+    filename: 'index.bundle.js',
+  },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
         use: 'ts-loader',
       },
