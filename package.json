@@ -1,7 +1,7 @@
 {
   "name": "redshield",
   "license": "MIT",
-  "version": "0.3.15",
+  "version": "0.3.16",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
