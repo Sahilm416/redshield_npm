@@ -8,6 +8,9 @@
     "build": "pnpm clean && tsup && pnpm build:declarations",
     "build:declarations": "npx tsc -p tsconfig.declarations.json",
     "clean": "rmdir /s /q dist",
+    "ubuild": "pnpm uclean && pnpm build:udeclarations",
+    "build:udeclarations": "tsc -p tsconfig.declarations.json",
+    "uclean": "rimraf ./dist",
     "dev": "tsup --watch",
     "lint": "tsc"
   },

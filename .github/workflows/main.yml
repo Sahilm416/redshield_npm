@@ -30,4 +30,4 @@ jobs:
       - name: Lint and Build
         run: |
           pnpm run lint
-          pnpm run build
+          pnpm run ubuild
