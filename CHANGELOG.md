@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.17
+
+### Patch Changes
+
+- f38e432: added ubuntu specific github action build command
+
 ## 0.3.16
 
 ### Patch Changes
