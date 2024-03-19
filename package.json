@@ -1,9 +1,10 @@
 {
   "name": "redshield",
   "license": "MIT",
-  "version": "0.3.16",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "version": "0.3.17",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "pnpm clean && tsup && pnpm build:declarations",
     "build:declarations": "npx tsc -p tsconfig.declarations.json",
@@ -13,13 +14,6 @@
     "uclean": "rimraf ./dist",
     "dev": "tsup --watch",
     "lint": "tsc"
-  },
-  "exports": {
-    "./auth": {
-      "types": "./dist/types/components/index.d.ts",
-      "import": "./dist/esm/components/index.js",
-      "require": "./dist/cjs/index.js"
-    }
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
