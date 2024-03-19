@@ -1,3 +1,3 @@
-import "../styles/tailwind.css"
+import "../styles/tailwind.css";
 export {default as LogOutButton } from "./LogOutButton";
-export {default as Auth } from "./Auth";
+export {default as AuthPage } from "./Auth";

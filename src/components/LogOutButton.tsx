@@ -1,18 +1,19 @@
-"use client";
+"use client"
 import React from "react";
-import { testServer } from "../actions/login";
+import { LogOut } from "../actions/auth";
 
-const LogOutButton = () => {
+export default function LogOutButton({ className }: { className?: string }) {
   return (
-    <button
-      onClick={async () => {
-        await testServer();
-      }}
-      className="bg-green-200 text-green-700 border border-green-700 p-1"
-    >
-      log out
-    </button>
+    <div>
+      <button
+        className={className}
+        onClick={async () => {
+          await LogOut();
+          return window.location.reload();
+        }}
+      >
+        logout
+      </button>
+    </div>
   );
-};
-
-export default LogOutButton;
+}

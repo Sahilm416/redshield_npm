@@ -1,32 +1,23 @@
-import "../styles/tailwind.css"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import LoginCard from "./LoginCard";
 import RegisterCard from "./RegisterCard";
 import React from "react";
 import { Toaster } from "sonner";
+import { getProject } from "../actions/auth";
 
+export default async function AuthPage() {
+  const project = await getProject();
 
-export default function AuthPage() {
-//   if (!project.status) {
-//     return (
-//       <div className="w-full h-screen absolute top-0 right-0 flex justify-center items-center bg-black ">
-//         <div className="w-[90vw] max-w-[450px] h-[200px] flex flex-col gap-2 justify-center items-center border border-red-700 bg-gray-900/30">
-//           <p className="text-2xl text-red-700">{project.message}</p>
-//           <p className="text-zinc-200">
-//             visit{" "}
-//             <a
-//               className="text-blue-700"
-//               target="blanc"
-//               href="https://redshield.vercel.app"
-//             >
-//               redshield{" "}
-//             </a>
-//             to get a key
-//           </p>
-//         </div>
-//       </div>
-//     );
-//   }
+  if (!project.status) {
+    return (
+      <div className="w-full h-screen absolute top-0 right-0 bg-black/95 overflow-hidden z-50 flex text-center justify-center items-center">
+        <div className="w-full max-w-[400px] p-5 border border-red-600 bg-black text-red-600">
+          Error loading AUTH UI <br />
+          {project.message}
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <Tabs className=" w-[90vw] max-w-[400px]" defaultValue="login">
@@ -40,10 +31,14 @@ export default function AuthPage() {
         </TabsList>
         <TabsContent value="login">
           <LoginCard
+            project_name={project.project_name}
+            project_id={project.project_id}
           />
         </TabsContent>
         <TabsContent value="register">
           <RegisterCard
+            project_name={project.project_name}
+            project_id={project.project_id}
           />
         </TabsContent>
       </Tabs>
