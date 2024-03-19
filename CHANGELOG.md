@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.3.20
+
+### Patch Changes
+
+- b4bb157: added peer dependencies
+
 ## 0.3.17
 
 ### Patch Changes
