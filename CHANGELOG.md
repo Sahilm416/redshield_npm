@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.0
+
+### Minor Changes
+
+- 2ac0b59: added whole auth ui
+
 ## 0.3.21
 
 ### Patch Changes
