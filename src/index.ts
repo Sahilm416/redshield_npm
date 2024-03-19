@@ -1,2 +1,2 @@
 import "./styles/tailwind.css"
-export { LogOutButton } from "./components"
+export { default as LogOutButton } from "./components/LogOutButton"
