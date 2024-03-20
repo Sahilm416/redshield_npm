@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.4
+
+### Patch Changes
+
+- 7be3322: reconfigured build with next version
+
 ## 0.4.3
 
 ### Patch Changes
