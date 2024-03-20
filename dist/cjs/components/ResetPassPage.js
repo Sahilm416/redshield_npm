@@ -35,7 +35,6 @@ var import_react = __toESM(require("react"));
 var import_ResetPassComponent = __toESM(require("./ResetPassComponent"));
 var import_forgotPassword = require("../actions/forgotPassword");
 async function ResetPassPage({ token }) {
-  console.log(token);
   const tokenValidation = await (0, import_forgotPassword.checkResetPasswordToken)({ token });
   return /* @__PURE__ */ import_react.default.createElement("div", { className: "w-full max-w-[450px]" }, /* @__PURE__ */ import_react.default.createElement(import_ResetPassComponent.default, { data: tokenValidation }));
 }

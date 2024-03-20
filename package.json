@@ -9,7 +9,7 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     },
-    "./auth": {
+    "./ui": {
       "types": "./dist/types/components/index.d.ts",
       "import": "./dist/esm/components/index.js",
       "require": "./dist/cjs/components/index.js"
@@ -48,8 +48,15 @@
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "next": "^14.1.0",
+    "next": ">=14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": false,
+      "description": "This package requires Next.js version 14.1.0 or higher.",
+      "link": "https://nextjs.org/docs/getting-started"
+    }
   }
 }
