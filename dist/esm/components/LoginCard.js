@@ -33,10 +33,10 @@ function LoginCard({ project_name, project_id }) {
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, forgotPassword ? /* @__PURE__ */ React.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ React.createElement(Card, { className: " dark:bg-gray-900/20 bg-white p-2 shadow-lg rounded-none border-[#EBEBEB] dark:border-[#1F1F1F]" }, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ React.createElement(CardContent, { className: "flex flex-col gap-3" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, forgotPassword ? /* @__PURE__ */ React.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ React.createElement(Card, { className: " dark:bg-gray-900/20 bg-white p-2 shadow-lg rounded-md border-[#EBEBEB] dark:border-[#1F1F1F]" }, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ React.createElement(CardContent, { className: "flex flex-col gap-3" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ React.createElement(
     Input,
     {
-      className: "border-[#EBEBEB] dark:border-[#1F1F1F] rounded-none",
+      className: "border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm",
       autoFocus: true,
       placeholder: "enter email",
       type: "email",
@@ -47,7 +47,7 @@ function LoginCard({ project_name, project_id }) {
   ), /* @__PURE__ */ React.createElement(Label, { htmlFor: "password" }, "Password"), /* @__PURE__ */ React.createElement(
     Input,
     {
-      className: "border-[#EBEBEB] dark:border-[#1F1F1F] rounded-none",
+      className: "border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm",
       placeholder: "enter password",
       type: "password",
       name: "password",
@@ -58,7 +58,7 @@ function LoginCard({ project_name, project_id }) {
     Button,
     {
       disabled: loading,
-      className: "w-full rounded-none",
+      className: "w-full rounded-sm",
       type: "submit"
     },
     loading ? /* @__PURE__ */ React.createElement(Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px] origin-center " }) : "login"
@@ -81,14 +81,14 @@ function ForgotPasswordComponent({
     }
     setResetPassLoading(false);
   };
-  return /* @__PURE__ */ React.createElement("form", { action: resetPassRequest }, /* @__PURE__ */ React.createElement(Card, { className: " rounded-none" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Reset Password")), /* @__PURE__ */ React.createElement(CardContent, { className: "flex flex-col gap-5" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "forgotPassEmail" }, "Email"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement("form", { action: resetPassRequest }, /* @__PURE__ */ React.createElement(Card, { className: " rounded-md" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Reset Password")), /* @__PURE__ */ React.createElement(CardContent, { className: "flex flex-col gap-5" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "forgotPassEmail" }, "Email"), /* @__PURE__ */ React.createElement(
     Input,
     {
       name: "email",
       placeholder: "enter your email address",
       required: true,
       autoFocus: true,
-      className: " rounded-none",
+      className: " rounded-sm",
       id: "forgotPassEmail",
       type: "email"
     }
@@ -97,10 +97,10 @@ function ForgotPasswordComponent({
     {
       onClick: () => setForgotPassword(false),
       variant: "outline",
-      className: "w-full rounded-none"
+      className: "w-full rounded-sm"
     },
     "Back"
-  ), /* @__PURE__ */ React.createElement(Button, { className: " rounded-none w-full" }, resetPassLoading ? /* @__PURE__ */ React.createElement(Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "Send link"))));
+  ), /* @__PURE__ */ React.createElement(Button, { className: " rounded-sm w-full" }, resetPassLoading ? /* @__PURE__ */ React.createElement(Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "Send link"))));
 }
 const fakeLoad = async () => {
   return;

@@ -12,7 +12,6 @@ export const LoginUser = async ({
   project_id: string;
 }) => {
   const key = await getEnv();
-
   try {
     const res = await fetch("https://redshield.vercel.app/api/service/login", {
       method: "POST",

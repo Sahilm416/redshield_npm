@@ -29,15 +29,18 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var components_exports = {};
 __export(components_exports, {
   AuthPage: () => import_Auth.default,
-  LogOutButton: () => import_LogOutButton.default
+  LogOutButton: () => import_LogOutButton.default,
+  ResetPassPage: () => import_ResetPassPage.default
 });
 module.exports = __toCommonJS(components_exports);
 var import_tailwind = require("../styles/tailwind.css");
 var import_LogOutButton = __toESM(require("./LogOutButton"));
 var import_Auth = __toESM(require("./Auth"));
+var import_ResetPassPage = __toESM(require("./ResetPassPage"));
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   AuthPage,
-  LogOutButton
+  LogOutButton,
+  ResetPassPage
 });
 //# sourceMappingURL=index.js.map

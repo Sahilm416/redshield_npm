@@ -1,13 +1,5 @@
-import "../output.css";
 import React from "react";
-type paramTypes = {
-    status: boolean;
-    message: string;
-    email: string;
+export default function ResetPassPage({ token }: {
     token: string;
-};
-export default function ResetPassPage({ data }: {
-    data: paramTypes;
-}): React.JSX.Element;
-export {};
+}): Promise<React.JSX.Element>;
 //# sourceMappingURL=ResetPassPage.d.ts.map

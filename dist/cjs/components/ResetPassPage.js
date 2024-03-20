@@ -1,5 +1,4 @@
 "use strict";
-"use client";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -32,84 +31,12 @@ __export(ResetPassPage_exports, {
   default: () => ResetPassPage
 });
 module.exports = __toCommonJS(ResetPassPage_exports);
-var import_output = require("../output.css");
-var import_card = require("./ui/card");
-var import_label = require("./ui/label");
-var import_input = require("./ui/input");
-var import_button = require("./ui/button");
-var import_check = require("../actions/check");
-var import_sonner = require("sonner");
-var import_react = require("react");
-var import_navigation = require("next/navigation");
-var import_react2 = __toESM(require("react"));
+var import_react = __toESM(require("react"));
+var import_ResetPassComponent = __toESM(require("./ResetPassComponent"));
 var import_forgotPassword = require("../actions/forgotPassword");
-var import_lucide_react = require("lucide-react");
-function ResetPassPage({ data }) {
-  return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null, data.status ? /* @__PURE__ */ import_react2.default.createElement(ResetPassComponent, { data }) : /* @__PURE__ */ import_react2.default.createElement(InvalidLink, null), " ", /* @__PURE__ */ import_react2.default.createElement(import_sonner.Toaster, { richColors: true, position: "bottom-right" }));
+async function ResetPassPage({ token }) {
+  console.log(token);
+  const tokenValidation = await (0, import_forgotPassword.checkResetPasswordToken)({ token });
+  return /* @__PURE__ */ import_react.default.createElement("div", { className: "w-full max-w-[450px]" }, /* @__PURE__ */ import_react.default.createElement(import_ResetPassComponent.default, { data: tokenValidation }));
 }
-const ResetPassComponent = ({ data }) => {
-  const [loading, setLoading] = (0, import_react.useState)(false);
-  const router = (0, import_navigation.useRouter)();
-  const sendData = async (formData) => {
-    const password = formData.get("reset_pass");
-    const confirm_password = formData.get("confirm_reset_pass");
-    if (password.trim() === confirm_password.trim()) {
-      const checkInputPassword = await (0, import_check.checkPassword)({ password });
-      if (checkInputPassword.status) {
-        await fakeLoad();
-        setLoading(true);
-        const res = await (0, import_forgotPassword.changePassword)({
-          password,
-          email: data.email,
-          token: data.token
-        });
-        if (res.status) {
-          import_sonner.toast.success(res.message);
-          router.refresh();
-          router.push("/Auth");
-        } else {
-          import_sonner.toast.error(res.message);
-        }
-      } else {
-        import_sonner.toast.error(checkInputPassword.message);
-      }
-    } else {
-      import_sonner.toast.error("password did not match");
-    }
-    setLoading(false);
-  };
-  return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null, /* @__PURE__ */ import_react2.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react2.default.createElement(import_card.Card, { className: "w-[90vw] max-w-[450px] shadow-lg rounded-none bg-white dark:bg-gray-900/20" }, /* @__PURE__ */ import_react2.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react2.default.createElement(import_card.CardTitle, null, "Change Password")), /* @__PURE__ */ import_react2.default.createElement(import_card.CardContent, { className: "flex flex-col gap-4" }, /* @__PURE__ */ import_react2.default.createElement(import_label.Label, { htmlFor: "resetpass" }, "New password"), /* @__PURE__ */ import_react2.default.createElement(
-    import_input.Input,
-    {
-      required: true,
-      name: "reset_pass",
-      id: "resetpass",
-      type: "password",
-      className: " rounded-none"
-    }
-  ), /* @__PURE__ */ import_react2.default.createElement(import_label.Label, { htmlFor: "confirmresetpass" }, "Confirm Password"), /* @__PURE__ */ import_react2.default.createElement(
-    import_input.Input,
-    {
-      required: true,
-      name: "confirm_reset_pass",
-      id: "confirmresetpass",
-      type: "password",
-      className: " rounded-none"
-    }
-  )), /* @__PURE__ */ import_react2.default.createElement(import_card.CardFooter, { className: " justify-end" }, /* @__PURE__ */ import_react2.default.createElement(
-    import_button.Button,
-    {
-      disabled: loading,
-      type: "submit",
-      className: " w-[150px] rounded-none"
-    },
-    loading ? /* @__PURE__ */ import_react2.default.createElement(import_lucide_react.Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "Save"
-  )))));
-};
-const InvalidLink = () => {
-  return /* @__PURE__ */ import_react2.default.createElement("div", { className: "w-full h-screen flex justify-center items-center" }, /* @__PURE__ */ import_react2.default.createElement("p", null, "Invalid link"));
-};
-const fakeLoad = async () => {
-  return;
-};
 //# sourceMappingURL=ResetPassPage.js.map

@@ -41,7 +41,7 @@ export default function LoginCard({ project_name , project_id }: { project_name:
       {forgotPassword ? (
         <ForgotPasswordComponent setForgotPassword={setForgotPassword} />
       ) : (
-        <Card className=" dark:bg-gray-900/20 bg-white p-2 shadow-lg rounded-none border-[#EBEBEB] dark:border-[#1F1F1F]">
+        <Card className=" dark:bg-gray-900/20 bg-white p-2 shadow-lg rounded-md border-[#EBEBEB] dark:border-[#1F1F1F]">
           <form action={sendData}>
             <CardHeader>
               <CardTitle>Login to {project_name}</CardTitle>
@@ -49,7 +49,7 @@ export default function LoginCard({ project_name , project_id }: { project_name:
             <CardContent className="flex flex-col gap-3">
               <Label htmlFor="email">Email</Label>
               <Input
-                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-none"
+                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm"
                 autoFocus
                 placeholder="enter email"
                 type="email"
@@ -59,7 +59,7 @@ export default function LoginCard({ project_name , project_id }: { project_name:
               />
               <Label htmlFor="password">Password</Label>
               <Input
-                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-none"
+                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm"
                 placeholder="enter password"
                 type="password"
                 name="password"
@@ -70,7 +70,7 @@ export default function LoginCard({ project_name , project_id }: { project_name:
             <CardFooter className="flex-col gap-2 pb-2">
               <Button
                 disabled={loading}
-                className="w-full rounded-none"
+                className="w-full rounded-sm"
                 type="submit"
               >
                 {loading ? (
@@ -112,7 +112,7 @@ function ForgotPasswordComponent({
   };
   return (
     <form action={resetPassRequest}>
-      <Card className=" rounded-none">
+      <Card className=" rounded-md">
         <CardHeader>
           <CardTitle>Reset Password</CardTitle>
         </CardHeader>
@@ -123,7 +123,7 @@ function ForgotPasswordComponent({
             placeholder="enter your email address"
             required
             autoFocus
-            className=" rounded-none"
+            className=" rounded-sm"
             id="forgotPassEmail"
             type="email"
           />
@@ -132,11 +132,11 @@ function ForgotPasswordComponent({
           <Button
             onClick={() => setForgotPassword(false)}
             variant={"outline"}
-            className="w-full rounded-none"
+            className="w-full rounded-sm"
           >
             Back
           </Button>
-          <Button className=" rounded-none w-full">
+          <Button className=" rounded-sm w-full">
             {resetPassLoading ? (
               <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
             ) : (
