@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.1
+
+### Patch Changes
+
+- 3381a80: refacto reset pass page
+
 ## 0.4.0
 
 ### Minor Changes
