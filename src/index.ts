@@ -1,2 +1,7 @@
-import "./styles/tailwind.css"
-export { default as LogOutButton } from "./components/LogOutButton"
+export { getSession } from "./actions/auth";
+export {
+  login,
+  register,
+  sendEmailVerificationCode,
+  verifyVerificationCode,
+} from "./methods/additional";

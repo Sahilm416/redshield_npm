@@ -1,6 +1,15 @@
-import "./styles/tailwind.css";
-import { default as default2 } from "./components/LogOutButton";
+import { getSession } from "./actions/auth";
+import {
+  login,
+  register,
+  sendEmailVerificationCode,
+  verifyVerificationCode
+} from "./methods/additional";
 export {
-  default2 as LogOutButton
+  getSession,
+  login,
+  register,
+  sendEmailVerificationCode,
+  verifyVerificationCode
 };
 //# sourceMappingURL=index.js.map
