@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.20
+
+### Patch Changes
+
+- 22c48be: secret key naming fix
+
 ## 0.4.19
 
 ### Patch Changes
