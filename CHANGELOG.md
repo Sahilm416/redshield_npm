@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.9
+
+### Patch Changes
+
+- 8dcee11: test for added components config
+
 ## 0.4.8
 
 ### Patch Changes
