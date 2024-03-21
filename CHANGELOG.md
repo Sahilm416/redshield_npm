@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.21
+
+### Patch Changes
+
+- 977cfb7: make session retrival fast
+
 ## 0.4.20
 
 ### Patch Changes
