@@ -36,6 +36,6 @@ var import_ResetPassComponent = __toESM(require("./ResetPassComponent"));
 var import_forgotPassword = require("../actions/forgotPassword");
 async function ResetPassPage({ token }) {
   const tokenValidation = await (0, import_forgotPassword.checkResetPasswordToken)({ token });
-  return /* @__PURE__ */ import_react.default.createElement("div", { className: "w-full max-w-[450px]" }, /* @__PURE__ */ import_react.default.createElement(import_ResetPassComponent.default, { data: tokenValidation }));
+  return /* @__PURE__ */ import_react.default.createElement("div", { className: "redshield-w-full redshield-max-w-[450px]" }, /* @__PURE__ */ import_react.default.createElement(import_ResetPassComponent.default, { data: tokenValidation }));
 }
 //# sourceMappingURL=ResetPassPage.js.map

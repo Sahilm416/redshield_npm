@@ -20,6 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var additional_exports = {};
 __export(additional_exports, {
   login: () => login,
+  logout: () => logout,
   register: () => register,
   sendEmailVerificationCode: () => sendEmailVerificationCode,
   verifyVerificationCode: () => verifyVerificationCode
@@ -59,9 +60,14 @@ const register = async ({ email, password }) => {
   });
   return res;
 };
+const logout = async () => {
+  await (0, import_auth.LogOut)();
+  return;
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   login,
+  logout,
   register,
   sendEmailVerificationCode,
   verifyVerificationCode

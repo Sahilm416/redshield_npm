@@ -1,6 +1,7 @@
 export { getSession } from "./actions/auth";
 export {
   login,
+  logout,
   register,
   sendEmailVerificationCode,
   verifyVerificationCode,

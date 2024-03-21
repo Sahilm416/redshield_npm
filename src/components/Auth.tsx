@@ -10,8 +10,8 @@ export default async function AuthPage() {
 
   if (!project.status) {
     return (
-      <div className="w-full h-screen absolute top-0 right-0 bg-black/95 overflow-hidden z-50 flex text-center justify-center items-center">
-        <div className="w-full max-w-[400px] p-5 border border-red-600 bg-black text-red-600">
+      <div className="redshield-w-full redshield-h-screen redshield-absolute redshield-top-0 redshield-right-0 redshield-bg-black/95 redshield-overflow-hidden redshield-z-50 redshield-flex redshield-text-center redshield-justify-center redshield-items-center">
+        <div className="redshield-w-full redshield-max-w-[400px] redshield-p-5 redshield-border redshield-border-red-600 redshield-bg-black redshield-text-red-600">
           Error loading AUTH UI <br />
           {project.message}
         </div>
@@ -20,12 +20,12 @@ export default async function AuthPage() {
   }
   return (
     <div>
-      <Tabs className=" w-[90vw] max-w-[400px]" defaultValue="login">
-        <TabsList className="grid dark:bg-slate-900 w-full grid-cols-2 rounded-md">
-          <TabsTrigger className=" rounded-none" value="login">
+      <Tabs className="redshield-w-[90vw] redshield-max-w-[400px]" defaultValue="login">
+        <TabsList className="redshield-grid redshield-dark:bg-slate-900 redshield-w-full redshield-grid-cols-2 redshield-rounded-md">
+          <TabsTrigger className="redshield-rounded-none" value="login">
             Login
           </TabsTrigger>
-          <TabsTrigger className=" rounded-dm" value="register">
+          <TabsTrigger className="redshield-rounded-dm" value="register">
             Register
           </TabsTrigger>
         </TabsList>

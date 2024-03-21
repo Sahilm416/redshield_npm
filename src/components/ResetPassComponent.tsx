@@ -25,7 +25,9 @@ type paramTypes = {
 };
 export default function ResetPassComponent({ data }: { data: paramTypes }) {
   return (
-    <>{data.status ? <ResetPass data={data} /> : <InvalidLink />} <Toaster richColors position="bottom-right"/></>
+    <>
+      {data.status ? <ResetPass data={data} /> : <InvalidLink />} <Toaster richColors position="bottom-right"/>
+    </>
   );
 }
 
@@ -66,18 +68,18 @@ const ResetPass = ({ data }: { data: paramTypes }) => {
   return (
     <>
       <form action={sendData}>
-        <Card className="w-[90vw] max-w-[450px] shadow-lg rounded-none bg-white dark:bg-gray-900/20">
+        <Card className="redshield-w-[90vw] redshield-max-w-[450px] redshield-shadow-lg redshield-rounded-none redshield-bg-white redshield-dark:bg-gray-900/20">
           <CardHeader>
             <CardTitle>Change Password</CardTitle>
           </CardHeader>
-          <CardContent className="flex flex-col gap-4">
+          <CardContent className="redshield-flex redshield-flex-col redshield-gap-4">
             <Label htmlFor="resetpass">New password</Label>
             <Input
               required
               name="reset_pass"
               id="resetpass"
               type="password"
-              className=" rounded-none"
+              className="redshield-rounded-none"
             />
             <Label htmlFor="confirmresetpass">Confirm Password</Label>
             <Input
@@ -85,17 +87,17 @@ const ResetPass = ({ data }: { data: paramTypes }) => {
               name="confirm_reset_pass"
               id="confirmresetpass"
               type="password"
-              className=" rounded-none"
+              className="redshield-rounded-none"
             />
           </CardContent>
-          <CardFooter className=" justify-end">
+          <CardFooter className="redshield-justify-end">
             <Button
               disabled={loading}
               type="submit"
-              className=" w-[150px] rounded-none"
+              className="redshield-w-[150px] redshield-rounded-none"
             >
               {loading ? (
-                <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
+                <Loader2 className="redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]"/>
               ) : (
                 "Save"
               )}
@@ -109,7 +111,7 @@ const ResetPass = ({ data }: { data: paramTypes }) => {
 
 const InvalidLink = () => {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
+    <div className="redshield-w-full redshield-h-screen redshield-flex redshield-justify-center redshield-items-center">
       <p>Invalid link</p>
     </div>
   );

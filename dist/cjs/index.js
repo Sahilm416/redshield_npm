@@ -20,6 +20,7 @@ var src_exports = {};
 __export(src_exports, {
   getSession: () => import_auth.getSession,
   login: () => import_additional.login,
+  logout: () => import_additional.logout,
   register: () => import_additional.register,
   sendEmailVerificationCode: () => import_additional.sendEmailVerificationCode,
   verifyVerificationCode: () => import_additional.verifyVerificationCode
@@ -31,6 +32,7 @@ var import_additional = require("./methods/additional");
 0 && (module.exports = {
   getSession,
   login,
+  logout,
   register,
   sendEmailVerificationCode,
   verifyVerificationCode

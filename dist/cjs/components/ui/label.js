@@ -1,5 +1,4 @@
 "use strict";
-"use client";
 var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -37,7 +36,7 @@ var LabelPrimitive = __toESM(require("@radix-ui/react-label"));
 var import_class_variance_authority = require("class-variance-authority");
 var import_utils = require("../../lib/utils");
 const labelVariants = (0, import_class_variance_authority.cva)(
-  "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+  "redshield-text-sm redshield-font-medium redshield-leading-none redshield-peer-disabled:cursor-not-allowed redshield-peer-disabled:opacity-70"
 );
 const Label = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React.createElement(
   LabelPrimitive.Root,

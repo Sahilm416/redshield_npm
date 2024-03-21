@@ -77,14 +77,14 @@ const ResetPass = ({ data }) => {
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null, /* @__PURE__ */ import_react2.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react2.default.createElement(import_card.Card, { className: "w-[90vw] max-w-[450px] shadow-lg rounded-none bg-white dark:bg-gray-900/20" }, /* @__PURE__ */ import_react2.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react2.default.createElement(import_card.CardTitle, null, "Change Password")), /* @__PURE__ */ import_react2.default.createElement(import_card.CardContent, { className: "flex flex-col gap-4" }, /* @__PURE__ */ import_react2.default.createElement(import_label.Label, { htmlFor: "resetpass" }, "New password"), /* @__PURE__ */ import_react2.default.createElement(
+  return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null, /* @__PURE__ */ import_react2.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react2.default.createElement(import_card.Card, { className: "redshield-w-[90vw] redshield-max-w-[450px] redshield-shadow-lg redshield-rounded-none redshield-bg-white redshield-dark:bg-gray-900/20" }, /* @__PURE__ */ import_react2.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react2.default.createElement(import_card.CardTitle, null, "Change Password")), /* @__PURE__ */ import_react2.default.createElement(import_card.CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-4" }, /* @__PURE__ */ import_react2.default.createElement(import_label.Label, { htmlFor: "resetpass" }, "New password"), /* @__PURE__ */ import_react2.default.createElement(
     import_input.Input,
     {
       required: true,
       name: "reset_pass",
       id: "resetpass",
       type: "password",
-      className: " rounded-none"
+      className: "redshield-rounded-none"
     }
   ), /* @__PURE__ */ import_react2.default.createElement(import_label.Label, { htmlFor: "confirmresetpass" }, "Confirm Password"), /* @__PURE__ */ import_react2.default.createElement(
     import_input.Input,
@@ -93,20 +93,20 @@ const ResetPass = ({ data }) => {
       name: "confirm_reset_pass",
       id: "confirmresetpass",
       type: "password",
-      className: " rounded-none"
+      className: "redshield-rounded-none"
     }
-  )), /* @__PURE__ */ import_react2.default.createElement(import_card.CardFooter, { className: " justify-end" }, /* @__PURE__ */ import_react2.default.createElement(
+  )), /* @__PURE__ */ import_react2.default.createElement(import_card.CardFooter, { className: "redshield-justify-end" }, /* @__PURE__ */ import_react2.default.createElement(
     import_button.Button,
     {
       disabled: loading,
       type: "submit",
-      className: " w-[150px] rounded-none"
+      className: "redshield-w-[150px] redshield-rounded-none"
     },
-    loading ? /* @__PURE__ */ import_react2.default.createElement(import_lucide_react.Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "Save"
+    loading ? /* @__PURE__ */ import_react2.default.createElement(import_lucide_react.Loader2, { className: "redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" }) : "Save"
   )))));
 };
 const InvalidLink = () => {
-  return /* @__PURE__ */ import_react2.default.createElement("div", { className: "w-full h-screen flex justify-center items-center" }, /* @__PURE__ */ import_react2.default.createElement("p", null, "Invalid link"));
+  return /* @__PURE__ */ import_react2.default.createElement("div", { className: "redshield-w-full redshield-h-screen redshield-flex redshield-justify-center redshield-items-center" }, /* @__PURE__ */ import_react2.default.createElement("p", null, "Invalid link"));
 };
 const fakeLoad = async () => {
   return;

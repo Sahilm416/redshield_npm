@@ -48,7 +48,7 @@ function RegisterCard({
 }) {
   const [formCount, setFormCount] = (0, import_react.useState)(1);
   const [email, setEmail] = (0, import_react.useState)("");
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: " dark:bg-gray-900/20 bg-white px-2 h-auto shadow-lg rounded-none" }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Register to ", project_name), /* @__PURE__ */ import_react.default.createElement(import_card.CardDescription, null, "redis based auth")), formCount === 1 ? /* @__PURE__ */ import_react.default.createElement(Form1, { setFormCount, setEmail }) : formCount === 2 ? /* @__PURE__ */ import_react.default.createElement(Form2, { setFormCount, email }) : /* @__PURE__ */ import_react.default.createElement(Form3, { email, project_id })));
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: "redshield-dark:bg-gray-900/20 redshield-bg-white redshield-px-2 redshield-h-auto redshield-shadow-lg redshield-rounded-none" }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Register to ", project_name), /* @__PURE__ */ import_react.default.createElement(import_card.CardDescription, null, "redis based auth")), formCount === 1 ? /* @__PURE__ */ import_react.default.createElement(Form1, { setFormCount, setEmail }) : formCount === 2 ? /* @__PURE__ */ import_react.default.createElement(Form2, { setFormCount, email }) : /* @__PURE__ */ import_react.default.createElement(Form3, { email, project_id })));
 }
 const Form1 = ({
   setFormCount,
@@ -72,7 +72,7 @@ const Form1 = ({
   return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, null, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: " rounded-none",
+      className: "redshield-rounded-none",
       required: true,
       id: "email",
       name: "email",
@@ -84,9 +84,9 @@ const Form1 = ({
     {
       disabled: loading,
       type: "submit",
-      className: "w-full rounded-none"
+      className: "redshield-w-full redshield-rounded-none"
     },
-    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "continue"
+    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" }) : "continue"
   ))));
 };
 const Form2 = ({
@@ -107,21 +107,21 @@ const Form2 = ({
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "flex flex-col gap-3" }, /* @__PURE__ */ import_react.default.createElement("p", { className: "text-sm text-slate-400 dark:text-slate-500" }, "enter the code sent to ", /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("span", { className: "text-slate-700 dark:text-slate-300" }, email), " "), /* @__PURE__ */ import_react.default.createElement(
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ import_react.default.createElement("p", { className: "redshield-text-sm redshield-text-slate-400 redshield-dark:text-slate-500" }, "enter the code sent to ", /* @__PURE__ */ import_react.default.createElement("br", null), /* @__PURE__ */ import_react.default.createElement("span", { className: "redshield-text-slate-700 redshield-dark:text-slate-300" }, email), " "), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: " rounded-none",
+      className: "redshield-rounded-none",
       name: "code",
       type: "text",
       required: true,
       placeholder: "enter code"
     }
-  )), /* @__PURE__ */ import_react.default.createElement(import_card.CardFooter, { className: "flex gap-3" }, /* @__PURE__ */ import_react.default.createElement(
+  )), /* @__PURE__ */ import_react.default.createElement(import_card.CardFooter, { className: "redshield-flex redshield-gap-3" }, /* @__PURE__ */ import_react.default.createElement(
     import_button.Button,
     {
       onClick: () => setFormCount(1),
       type: "button",
-      className: "w-[50%] rounded-none",
+      className: "redshield-w-[50%] redshield-rounded-none",
       variant: "outline"
     },
     "back"
@@ -130,12 +130,15 @@ const Form2 = ({
     {
       disabled: loading,
       type: "submit",
-      className: "w-[50%] rounded-none"
+      className: "redshield-w-[50%] redshield-rounded-none"
     },
-    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "submit"
+    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" }) : "submit"
   ))));
 };
-const Form3 = ({ email, project_id }) => {
+const Form3 = ({
+  email,
+  project_id
+}) => {
   const [loading, setLoading] = (0, import_react.useState)(false);
   const router = (0, import_navigation.useRouter)();
   const createUser = async (formData) => {
@@ -145,7 +148,11 @@ const Form3 = ({ email, project_id }) => {
       const validation = await (0, import_check.checkPassword)({ password: pass });
       if (validation.status) {
         setLoading(true);
-        const res = await (0, import_register.registerUser)({ email, password: pass, project_id });
+        const res = await (0, import_register.registerUser)({
+          email,
+          password: pass,
+          project_id
+        });
         if (res.status) {
           import_sonner.toast.success(res.message);
           router.push("/");
@@ -160,10 +167,10 @@ const Form3 = ({ email, project_id }) => {
       import_sonner.toast.error("password does not match");
     }
   };
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("form", { action: createUser }, /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "flex flex-col gap-3" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "pass" }, "Password"), /* @__PURE__ */ import_react.default.createElement(
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, /* @__PURE__ */ import_react.default.createElement("form", { action: createUser }, /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "pass" }, "Password"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: " rounded-none",
+      className: "redshield-rounded-none",
       name: "pass",
       id: "pass",
       type: "password"
@@ -171,7 +178,7 @@ const Form3 = ({ email, project_id }) => {
   ), /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "confirm" }, "Confirm Password"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: " rounded-none",
+      className: "redshield-rounded-none",
       name: "confirm",
       id: "confirm",
       type: "password"
@@ -181,9 +188,9 @@ const Form3 = ({ email, project_id }) => {
     {
       disabled: loading,
       type: "submit",
-      className: "w-full rounded-none"
+      className: "redshield-w-full redshield-rounded-none"
     },
-    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "create account"
+    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" }) : "create account"
   ))));
 };
 const fakeLoad = async () => {

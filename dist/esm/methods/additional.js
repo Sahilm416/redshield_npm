@@ -1,7 +1,7 @@
 "use server";
 import { LoginUser } from "../actions/login";
 import { registerUser, sendCode, verifyCode } from "../actions/register";
-import { getProject } from "../actions/auth";
+import { getProject, LogOut } from "../actions/auth";
 const login = async ({ email, password }) => {
   const { project_id } = await getProject();
   const res = await LoginUser({
@@ -33,8 +33,13 @@ const register = async ({ email, password }) => {
   });
   return res;
 };
+const logout = async () => {
+  await LogOut();
+  return;
+};
 export {
   login,
+  logout,
   register,
   sendEmailVerificationCode,
   verifyVerificationCode

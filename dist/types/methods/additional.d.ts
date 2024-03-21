@@ -28,5 +28,6 @@ export declare const register: ({ email, password }: Register) => Promise<{
     status: any;
     message: any;
 }>;
+export declare const logout: () => Promise<void>;
 export {};
 //# sourceMappingURL=additional.d.ts.map

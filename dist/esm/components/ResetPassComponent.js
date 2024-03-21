@@ -50,14 +50,14 @@ const ResetPass = ({ data }) => {
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(Card, { className: "w-[90vw] max-w-[450px] shadow-lg rounded-none bg-white dark:bg-gray-900/20" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Change Password")), /* @__PURE__ */ React.createElement(CardContent, { className: "flex flex-col gap-4" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "resetpass" }, "New password"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(Card, { className: "redshield-w-[90vw] redshield-max-w-[450px] redshield-shadow-lg redshield-rounded-none redshield-bg-white redshield-dark:bg-gray-900/20" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Change Password")), /* @__PURE__ */ React.createElement(CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-4" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "resetpass" }, "New password"), /* @__PURE__ */ React.createElement(
     Input,
     {
       required: true,
       name: "reset_pass",
       id: "resetpass",
       type: "password",
-      className: " rounded-none"
+      className: "redshield-rounded-none"
     }
   ), /* @__PURE__ */ React.createElement(Label, { htmlFor: "confirmresetpass" }, "Confirm Password"), /* @__PURE__ */ React.createElement(
     Input,
@@ -66,20 +66,20 @@ const ResetPass = ({ data }) => {
       name: "confirm_reset_pass",
       id: "confirmresetpass",
       type: "password",
-      className: " rounded-none"
+      className: "redshield-rounded-none"
     }
-  )), /* @__PURE__ */ React.createElement(CardFooter, { className: " justify-end" }, /* @__PURE__ */ React.createElement(
+  )), /* @__PURE__ */ React.createElement(CardFooter, { className: "redshield-justify-end" }, /* @__PURE__ */ React.createElement(
     Button,
     {
       disabled: loading,
       type: "submit",
-      className: " w-[150px] rounded-none"
+      className: "redshield-w-[150px] redshield-rounded-none"
     },
-    loading ? /* @__PURE__ */ React.createElement(Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "Save"
+    loading ? /* @__PURE__ */ React.createElement(Loader2, { className: "redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" }) : "Save"
   )))));
 };
 const InvalidLink = () => {
-  return /* @__PURE__ */ React.createElement("div", { className: "w-full h-screen flex justify-center items-center" }, /* @__PURE__ */ React.createElement("p", null, "Invalid link"));
+  return /* @__PURE__ */ React.createElement("div", { className: "redshield-w-full redshield-h-screen redshield-flex redshield-justify-center redshield-items-center" }, /* @__PURE__ */ React.createElement("p", null, "Invalid link"));
 };
 const fakeLoad = async () => {
   return;

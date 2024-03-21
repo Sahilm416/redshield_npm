@@ -60,10 +60,10 @@ function LoginCard({ project_name, project_id }) {
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, forgotPassword ? /* @__PURE__ */ import_react.default.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: " dark:bg-gray-900/20 bg-white p-2 shadow-lg rounded-md border-[#EBEBEB] dark:border-[#1F1F1F]" }, /* @__PURE__ */ import_react.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "flex flex-col gap-3" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ import_react.default.createElement(
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, forgotPassword ? /* @__PURE__ */ import_react.default.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: "redshield-dark:bg-gray-900/20 redshield-bg-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F]" }, /* @__PURE__ */ import_react.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: "border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm",
+      className: "redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm",
       autoFocus: true,
       placeholder: "enter email",
       type: "email",
@@ -74,21 +74,21 @@ function LoginCard({ project_name, project_id }) {
   ), /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "password" }, "Password"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: "border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm",
+      className: "redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm",
       placeholder: "enter password",
       type: "password",
       name: "password",
       id: "password",
       required: true
     }
-  )), /* @__PURE__ */ import_react.default.createElement(import_card.CardFooter, { className: "flex-col gap-2 pb-2" }, /* @__PURE__ */ import_react.default.createElement(
+  )), /* @__PURE__ */ import_react.default.createElement(import_card.CardFooter, { className: "redshield-flex-col redshield-gap-2 redshield-pb-2" }, /* @__PURE__ */ import_react.default.createElement(
     import_button.Button,
     {
       disabled: loading,
-      className: "w-full rounded-sm",
+      className: "redshield-w-full redshield-rounded-sm",
       type: "submit"
     },
-    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px] origin-center " }) : "login"
+    loading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px] redshield-origin-center" }) : "login"
   ), /* @__PURE__ */ import_react.default.createElement(import_button.Button, { onClick: () => setForgotPassword(true), variant: "link" }, "forgot password")))));
 }
 function ForgotPasswordComponent({
@@ -108,26 +108,26 @@ function ForgotPasswordComponent({
     }
     setResetPassLoading(false);
   };
-  return /* @__PURE__ */ import_react.default.createElement("form", { action: resetPassRequest }, /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: " rounded-md" }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Reset Password")), /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "flex flex-col gap-5" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "forgotPassEmail" }, "Email"), /* @__PURE__ */ import_react.default.createElement(
+  return /* @__PURE__ */ import_react.default.createElement("form", { action: resetPassRequest }, /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: "redshield-rounded-md" }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Reset Password")), /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-5" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "forgotPassEmail" }, "Email"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
       name: "email",
       placeholder: "enter your email address",
       required: true,
       autoFocus: true,
-      className: " rounded-sm",
+      className: "redshield-rounded-sm",
       id: "forgotPassEmail",
       type: "email"
     }
-  )), /* @__PURE__ */ import_react.default.createElement(import_card.CardFooter, { className: "gap-3" }, /* @__PURE__ */ import_react.default.createElement(
+  )), /* @__PURE__ */ import_react.default.createElement(import_card.CardFooter, { className: "redshield-gap-3" }, /* @__PURE__ */ import_react.default.createElement(
     import_button.Button,
     {
       onClick: () => setForgotPassword(false),
       variant: "outline",
-      className: "w-full rounded-sm"
+      className: "redshield-w-full redshield-rounded-sm"
     },
     "Back"
-  ), /* @__PURE__ */ import_react.default.createElement(import_button.Button, { className: " rounded-sm w-full" }, resetPassLoading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]" }) : "Send link"))));
+  ), /* @__PURE__ */ import_react.default.createElement(import_button.Button, { className: "redshield-rounded-sm redshield-w-full" }, resetPassLoading ? /* @__PURE__ */ import_react.default.createElement(import_lucide_react.Loader2, { className: "redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" }) : "Send link"))));
 }
 const fakeLoad = async () => {
   return;

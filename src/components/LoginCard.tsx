@@ -12,12 +12,12 @@ import {
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import React, { Dispatch, SetStateAction, useState } from "react";
-import { Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { sendResetPasswordLink } from "../actions/forgotPassword";
 
-export default function LoginCard({ project_name , project_id }: { project_name: string , project_id: string}) {
+export default function LoginCard({ project_name, project_id }: { project_name: string, project_id: string }) {
   const [loading, setLoading] = useState<boolean>(false);
   const [forgotPassword, setForgotPassword] = useState<boolean>(false);
 
@@ -27,7 +27,7 @@ export default function LoginCard({ project_name , project_id }: { project_name:
     const password = formData.get("password") as string;
     await fakeLoad();
     setLoading(true);
-    const res = await LoginUser({ email: email, password: password , project_id: project_id });
+    const res = await LoginUser({ email: email, password: password, project_id: project_id });
     if (res.status) {
       toast.success(res.message);
       router.refresh();
@@ -41,15 +41,15 @@ export default function LoginCard({ project_name , project_id }: { project_name:
       {forgotPassword ? (
         <ForgotPasswordComponent setForgotPassword={setForgotPassword} />
       ) : (
-        <Card className=" dark:bg-gray-900/20 bg-white p-2 shadow-lg rounded-md border-[#EBEBEB] dark:border-[#1F1F1F]">
+        <Card className="redshield-dark:bg-gray-900/20 redshield-bg-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F]">
           <form action={sendData}>
             <CardHeader>
               <CardTitle>Login to {project_name}</CardTitle>
             </CardHeader>
-            <CardContent className="flex flex-col gap-3">
+            <CardContent className="redshield-flex redshield-flex-col redshield-gap-3">
               <Label htmlFor="email">Email</Label>
               <Input
-                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm"
+                className="redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm"
                 autoFocus
                 placeholder="enter email"
                 type="email"
@@ -59,7 +59,7 @@ export default function LoginCard({ project_name , project_id }: { project_name:
               />
               <Label htmlFor="password">Password</Label>
               <Input
-                className="border-[#EBEBEB] dark:border-[#1F1F1F] rounded-sm"
+                className="redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm"
                 placeholder="enter password"
                 type="password"
                 name="password"
@@ -67,14 +67,14 @@ export default function LoginCard({ project_name , project_id }: { project_name:
                 required
               />
             </CardContent>
-            <CardFooter className="flex-col gap-2 pb-2">
+            <CardFooter className="redshield-flex-col redshield-gap-2 redshield-pb-2">
               <Button
                 disabled={loading}
-                className="w-full rounded-sm"
+                className="redshield-w-full redshield-rounded-sm"
                 type="submit"
               >
                 {loading ? (
-                  <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px] origin-center "/>
+                  <Loader2 className="redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px] redshield-origin-center" />
                 ) : (
                   "login"
                 )}
@@ -102,7 +102,7 @@ function ForgotPasswordComponent({
     const url = window.location.toString().split("/Auth")[0] as string;
     await fakeLoad();
     setResetPassLoading(true);
-    const res = await sendResetPasswordLink({ email: email , url: url });
+    const res = await sendResetPasswordLink({ email: email, url: url });
     if (res.status) {
       toast.success(res.message);
     } else {
@@ -112,33 +112,33 @@ function ForgotPasswordComponent({
   };
   return (
     <form action={resetPassRequest}>
-      <Card className=" rounded-md">
+      <Card className="redshield-rounded-md">
         <CardHeader>
           <CardTitle>Reset Password</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-5">
+        <CardContent className="redshield-flex redshield-flex-col redshield-gap-5">
           <Label htmlFor="forgotPassEmail">Email</Label>
           <Input
             name="email"
             placeholder="enter your email address"
             required
             autoFocus
-            className=" rounded-sm"
+            className="redshield-rounded-sm"
             id="forgotPassEmail"
             type="email"
           />
         </CardContent>
-        <CardFooter className="gap-3">
+        <CardFooter className="redshield-gap-3">
           <Button
             onClick={() => setForgotPassword(false)}
             variant={"outline"}
-            className="w-full rounded-sm"
+            className="redshield-w-full redshield-rounded-sm"
           >
             Back
           </Button>
-          <Button className=" rounded-sm w-full">
+          <Button className="redshield-rounded-sm redshield-w-full">
             {resetPassLoading ? (
-              <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
+              <Loader2 className="redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" />
             ) : (
               "Send link"
             )}

@@ -43,7 +43,7 @@ const Card = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ 
   {
     ref,
     className: (0, import_utils.cn)(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "redshield-rounded-lg redshield-border redshield-bg-card redshield-text-card-foreground redshield-shadow-sm",
       className
     ),
     ...props
@@ -54,7 +54,7 @@ const CardHeader = React.forwardRef(({ className, ...props }, ref) => /* @__PURE
   "div",
   {
     ref,
-    className: (0, import_utils.cn)("flex flex-col space-y-1.5 p-6", className),
+    className: (0, import_utils.cn)("redshield-flex redshield-flex-col redshield-space-y-1.5 redshield-p-6", className),
     ...props
   }
 ));
@@ -64,7 +64,7 @@ const CardTitle = React.forwardRef(({ className, ...props }, ref) => /* @__PURE_
   {
     ref,
     className: (0, import_utils.cn)(
-      "text-2xl font-semibold leading-none tracking-tight",
+      "redshield-text-2xl redshield-font-semibold redshield-leading-none redshield-tracking-tight",
       className
     ),
     ...props
@@ -75,18 +75,18 @@ const CardDescription = React.forwardRef(({ className, ...props }, ref) => /* @_
   "p",
   {
     ref,
-    className: (0, import_utils.cn)("text-sm text-muted-foreground", className),
+    className: (0, import_utils.cn)("redshield-text-sm redshield-text-muted-foreground", className),
     ...props
   }
 ));
 CardDescription.displayName = "CardDescription";
-const CardContent = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React.createElement("div", { ref, className: (0, import_utils.cn)("p-6 pt-0", className), ...props }));
+const CardContent = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React.createElement("div", { ref, className: (0, import_utils.cn)("redshield-p-6 redshield-pt-0", className), ...props }));
 CardContent.displayName = "CardContent";
 const CardFooter = React.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ React.createElement(
   "div",
   {
     ref,
-    className: (0, import_utils.cn)("flex items-center p-6 pt-0", className),
+    className: (0, import_utils.cn)("redshield-flex redshield-items-center redshield-p-6 redshield-pt-0", className),
     ...props
   }
 ));

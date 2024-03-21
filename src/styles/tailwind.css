@@ -72,10 +72,10 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply redshield-border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply redshield-bg-background redshield-text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

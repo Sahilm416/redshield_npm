@@ -12,7 +12,7 @@ import {
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Loader2 } from "lucide-react";
-import React, { Dispatch, SetStateAction , useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { registerUser, sendCode, verifyCode } from "../actions/register";
 import { checkPassword } from "../actions/check";
 import { toast } from "sonner";
@@ -20,7 +20,7 @@ import { useRouter } from "next/navigation";
 
 export default function RegisterCard({
   project_name,
-  project_id
+  project_id,
 }: {
   project_name: string;
   project_id: string;
@@ -30,7 +30,7 @@ export default function RegisterCard({
 
   return (
     <>
-      <Card className=" dark:bg-gray-900/20 bg-white px-2 h-auto shadow-lg rounded-none">
+      <Card className="redshield-dark:bg-gray-900/20 redshield-bg-white redshield-px-2 redshield-h-auto redshield-shadow-lg redshield-rounded-none">
         <CardHeader>
           <CardTitle>Register to {project_name}</CardTitle>
           <CardDescription>redis based auth</CardDescription>
@@ -77,7 +77,7 @@ const Form1 = ({
         <CardContent>
           <Label htmlFor="email">Email</Label>
           <Input
-            className=" rounded-none"
+            className="redshield-rounded-none"
             required
             id="email"
             name="email"
@@ -89,10 +89,10 @@ const Form1 = ({
           <Button
             disabled={loading}
             type="submit"
-            className="w-full rounded-none"
+            className="redshield-w-full redshield-rounded-none"
           >
             {loading ? (
-              <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
+              <Loader2 className="redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" />
             ) : (
               "continue"
             )}
@@ -128,26 +128,26 @@ const Form2 = ({
   return (
     <>
       <form action={sendData}>
-        <CardContent className="flex flex-col gap-3">
-          <p className="text-sm text-slate-400 dark:text-slate-500">
+        <CardContent className="redshield-flex redshield-flex-col redshield-gap-3">
+          <p className="redshield-text-sm redshield-text-slate-400 redshield-dark:text-slate-500">
             enter the code sent to <br />
-            <span className="text-slate-700 dark:text-slate-300">
+            <span className="redshield-text-slate-700 redshield-dark:text-slate-300">
               {email}
             </span>{" "}
           </p>
           <Input
-            className=" rounded-none"
+            className="redshield-rounded-none"
             name="code"
             type="text"
             required
             placeholder="enter code"
           />
         </CardContent>
-        <CardFooter className="flex gap-3">
+        <CardFooter className="redshield-flex redshield-gap-3">
           <Button
             onClick={() => setFormCount(1)}
             type="button"
-            className="w-[50%] rounded-none"
+            className="redshield-w-[50%] redshield-rounded-none"
             variant={"outline"}
           >
             back
@@ -155,10 +155,10 @@ const Form2 = ({
           <Button
             disabled={loading}
             type="submit"
-            className="w-[50%] rounded-none"
+            className="redshield-w-[50%] redshield-rounded-none"
           >
             {loading ? (
-              <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
+              <Loader2 className="redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" />
             ) : (
               "submit"
             )}
@@ -169,7 +169,13 @@ const Form2 = ({
   );
 };
 
-const Form3 = ({ email , project_id}: { email: string , project_id: string }) => {
+const Form3 = ({
+  email,
+  project_id,
+}: {
+  email: string;
+  project_id: string;
+}) => {
   const [loading, setLoading] = useState<boolean>(false);
   const router = useRouter();
 
@@ -181,7 +187,11 @@ const Form3 = ({ email , project_id}: { email: string , project_id: string }) =>
       if (validation.status) {
         setLoading(true);
 
-        const res = await registerUser({ email: email, password: pass , project_id: project_id});
+        const res = await registerUser({
+          email: email,
+          password: pass,
+          project_id: project_id,
+        });
         if (res.status) {
           toast.success(res.message);
           router.push("/");
@@ -199,17 +209,17 @@ const Form3 = ({ email , project_id}: { email: string , project_id: string }) =>
   return (
     <>
       <form action={createUser}>
-        <CardContent className="flex flex-col gap-3">
+        <CardContent className="redshield-flex redshield-flex-col redshield-gap-3">
           <Label htmlFor="pass">Password</Label>
           <Input
-            className=" rounded-none"
+            className="redshield-rounded-none"
             name="pass"
             id="pass"
             type="password"
           />
           <Label htmlFor="confirm">Confirm Password</Label>
           <Input
-            className=" rounded-none"
+            className="redshield-rounded-none"
             name="confirm"
             id="confirm"
             type="password"
@@ -219,10 +229,10 @@ const Form3 = ({ email , project_id}: { email: string , project_id: string }) =>
           <Button
             disabled={loading}
             type="submit"
-            className="w-full rounded-none"
+            className="redshield-w-full redshield-rounded-none"
           >
             {loading ? (
-              <Loader2 className="animate-[spin_0.4s_linear_infinite] w-[27px] h-[27px]"/>
+              <Loader2 className="redshield-animate-[spin_0.4s_linear_infinite] redshield-w-[27px] redshield-h-[27px]" />
             ) : (
               "create account"
             )}
