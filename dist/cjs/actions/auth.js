@@ -29,7 +29,7 @@ __export(auth_exports, {
 module.exports = __toCommonJS(auth_exports);
 var import_headers = require("next/headers");
 const getEnv = async () => {
-  return process.env.Red_key;
+  return process.env.RED_KEY;
 };
 const getProject = async () => {
   try {
@@ -77,14 +77,12 @@ const getProject = async () => {
 };
 const verifyJWT = async ({ token }) => {
   try {
-    const key = await getEnv();
     const jwt_secret = process.env.JWT_SECRET;
     const res = await fetch("https://redshield.vercel.app/api/service/verify", {
       method: "POST",
       cache: "no-store",
       headers: {
-        "Content-Type": "application/json",
-        Authorization: key
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         token,

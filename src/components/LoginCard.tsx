@@ -29,6 +29,7 @@ export default function LoginCard({ project_name, project_id }: { project_name: 
     setLoading(true);
     const res = await LoginUser({ email: email, password: password, project_id: project_id });
     if (res.status) {
+      formData.set("email","")
       toast.success(res.message);
       router.refresh();
     } else {

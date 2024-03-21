@@ -2,7 +2,7 @@
 import { cookies } from "next/headers";
 
 export const getEnv = async () => {
-  return process.env.Red_key!;
+  return process.env.RED_KEY!;
 };
 
 export const getProject = async () => {
@@ -55,14 +55,12 @@ export const getProject = async () => {
 
 export const verifyJWT = async ({ token }: { token: string | undefined }) => {
   try {
-    const key = await getEnv();
     const jwt_secret = process.env.JWT_SECRET! as string;
     const res = await fetch("https://redshield.vercel.app/api/service/verify", {
       method: "POST",
       cache: "no-store",
       headers: {
         "Content-Type": "application/json",
-        Authorization: key,
       },
       body: JSON.stringify({
         token: token,
