@@ -6,8 +6,12 @@ const getEnv = async () => {
 const getProject = async () => {
   try {
     const key = await getEnv();
+    const jwt_secret = process.env.JWT_SECRET;
     if (!key) {
-      throw new Error("please provide a key");
+      throw new Error("No api key specified");
+    }
+    if (!jwt_secret) {
+      throw new Error("No jwt secret specified");
     }
     const res = await fetch(
       "https://redshield.vercel.app/api/service/getProject",
@@ -46,6 +50,7 @@ const getProject = async () => {
 const verifyJWT = async ({ token }) => {
   try {
     const key = await getEnv();
+    const jwt_secret = process.env.JWT_SECRET;
     const res = await fetch("https://redshield.vercel.app/api/service/verify", {
       method: "POST",
       cache: "no-store",
@@ -54,7 +59,8 @@ const verifyJWT = async ({ token }) => {
         Authorization: key
       },
       body: JSON.stringify({
-        token
+        token,
+        jwt_secret
       })
     });
     const response = await res.json();

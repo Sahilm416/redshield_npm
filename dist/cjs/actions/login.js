@@ -30,6 +30,7 @@ const LoginUser = async ({
   project_id
 }) => {
   const key = await (0, import_auth.getEnv)();
+  const jwt_secret = process.env.JWT_SECRET;
   try {
     const res = await fetch("https://redshield.vercel.app/api/service/login", {
       method: "POST",
@@ -41,7 +42,8 @@ const LoginUser = async ({
       body: JSON.stringify({
         email: email.trim(),
         password: password.trim(),
-        project_id
+        project_id,
+        jwt_secret
       })
     });
     const response = await res.json();

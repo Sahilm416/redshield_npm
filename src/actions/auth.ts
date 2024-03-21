@@ -8,13 +8,18 @@ export const getEnv = async () => {
 export const getProject = async () => {
   try {
     const key = await getEnv();
+    const jwt_secret = process.env.JWT_SECRET!;
+
     if (!key) {
-      throw new Error("please provide a key");
+      throw new Error("No api key specified");
+    }
+    if (!jwt_secret) {
+      throw new Error("No jwt secret specified");
     }
     const res = await fetch(
       "https://redshield.vercel.app/api/service/getProject",
       {
-        cache: 'no-store',
+        cache: "no-store",
         headers: {
           Authorization: key,
         },
@@ -34,23 +39,24 @@ export const getProject = async () => {
     return {
       status: false,
       message: response.message,
-      project_id:"",
-      project_name:""
+      project_id: "",
+      project_name: "",
     };
   } catch (error) {
     console.log(error);
     return {
       status: false,
       message: "something went wrong",
-      project_id:"",
-      project_name:""
-    }
+      project_id: "",
+      project_name: "",
+    };
   }
 };
 
 export const verifyJWT = async ({ token }: { token: string | undefined }) => {
   try {
     const key = await getEnv();
+    const jwt_secret = process.env.JWT_SECRET! as string;
     const res = await fetch("https://redshield.vercel.app/api/service/verify", {
       method: "POST",
       cache: "no-store",
@@ -60,17 +66,18 @@ export const verifyJWT = async ({ token }: { token: string | undefined }) => {
       },
       body: JSON.stringify({
         token: token,
+        jwt_secret: jwt_secret,
       }),
     });
 
     const response = await res.json();
-    return response
+    return response;
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return {
       status: false,
-      message: "something went wrong"
-    }
+      message: "something went wrong",
+    };
   }
 };
 
@@ -86,7 +93,7 @@ export const getSession = async () => {
   }
 
   try {
-    const res = await verifyJWT({token: token});
+    const res = await verifyJWT({ token: token });
     return {
       status: res.status,
       message: res.message,
