@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.7
+
+### Patch Changes
+
+- 6a6efe0: provide jwt secret for methods
+
 ## 0.4.6
 
 ### Patch Changes
