@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.8
+
+### Patch Changes
+
+- 5fe140a: added tailwind prefix
+
 ## 0.4.7
 
 ### Patch Changes
