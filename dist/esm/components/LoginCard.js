@@ -33,10 +33,10 @@ function LoginCard({ project_name, project_id }) {
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, forgotPassword ? /* @__PURE__ */ React.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ React.createElement(Card, { className: "bg-gray-900/20 redshield-bg-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB] border-[#1F1F1F]" }, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ React.createElement(CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, forgotPassword ? /* @__PURE__ */ React.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ React.createElement(Card, { className: " redshield-bg-white dark:redshield-bg-black dark:redshield-text-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB]" }, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ React.createElement(CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ React.createElement(
     Input,
     {
-      className: "redshield-border-[#EBEBEB] border-[#1F1F1F] redshield-rounded-sm",
+      className: "redshield-border-[#EBEBEB] redshield-rounded-sm",
       autoFocus: true,
       placeholder: "enter email",
       type: "email",
@@ -47,7 +47,7 @@ function LoginCard({ project_name, project_id }) {
   ), /* @__PURE__ */ React.createElement(Label, { htmlFor: "password" }, "Password"), /* @__PURE__ */ React.createElement(
     Input,
     {
-      className: "redshield-border-[#EBEBEB] border-[#1F1F1F] redshield-rounded-sm",
+      className: "redshield-border-[#EBEBEB] redshield-rounded-sm",
       placeholder: "enter password",
       type: "password",
       name: "password",

@@ -1,32 +1,27 @@
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 47.4% 11.2%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 47.4% 11.2%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 100% 50%;
-  --destructive-foreground: 210 40% 98%;
-  --ring: 215 20.2% 65.1%;
-  --radius: 0.5rem;
+  --background-red: 0 0% 100%;
+  --foreground-red-red: 222.2 47.4% 11.2%;
+  --muted-red: 210 40% 96.1%;
+  --muted-foreground-red: 215.4 16.3% 46.9%;
+  --popover-red: 0 0% 100%;
+  --popover-foreground-red: 222.2 47.4% 11.2%;
+  --border-red: 214.3 31.8% 91.4%;
+  --input-red: 214.3 31.8% 91.4%;
+  --card-red: 0 0% 100%;
+  --card-foreground-red: 222.2 47.4% 11.2%;
+  --primary-red: 222.2 47.4% 11.2%;
+  --primary-foreground-red: 210 40% 98%;
+  --secondary-red: 210 40% 96.1%;
+  --secondary-foreground-red: 222.2 47.4% 11.2%;
+  --accent-red: 210 40% 96.1%;
+  --accent-foreground-red: 222.2 47.4% 11.2%;
+  --destructive-red: 0 100% 50%;
+  --destructive-foreground-red: 210 40% 98%;
+  --ring-red: 215 20.2% 65.1%;
+  --radius-red: 0.5rem;
 }
 * {
-  border-color: hsl(var(--border));
-}
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
-  font-feature-settings: "rlig" 1, "calt" 1;
+  border-color: hsl(var(--border-red));
 }
 *,
 ::before,
@@ -268,14 +263,14 @@ body {
   border-color: rgb(235 235 235 / var(--tw-border-opacity));
 }
 .redshield-border-input {
-  border-color: hsl(var(--input));
+  border-color: hsl(var(--input-red));
 }
 .redshield-border-red-600 {
   --tw-border-opacity: 1;
   border-color: rgb(220 38 38 / var(--tw-border-opacity));
 }
 .redshield-bg-background {
-  background-color: hsl(var(--background));
+  background-color: hsl(var(--background-red));
 }
 .redshield-bg-black {
   --tw-bg-opacity: 1;
@@ -285,19 +280,23 @@ body {
   background-color: rgb(0 0 0 / 0.95);
 }
 .redshield-bg-card {
-  background-color: hsl(var(--card));
+  background-color: hsl(var(--card-red));
 }
 .redshield-bg-destructive {
-  background-color: hsl(var(--destructive));
+  background-color: hsl(var(--destructive-red));
 }
 .redshield-bg-muted {
-  background-color: hsl(var(--muted));
+  background-color: hsl(var(--muted-red));
 }
 .redshield-bg-primary {
-  background-color: hsl(var(--primary));
+  background-color: hsl(var(--primary-red));
 }
 .redshield-bg-secondary {
   background-color: hsl(var(--secondary));
+}
+.redshield-bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 .redshield-bg-white {
   --tw-bg-opacity: 1;
@@ -373,26 +372,26 @@ body {
   letter-spacing: -0.025em;
 }
 .redshield-text-card-foreground {
-  color: hsl(var(--card-foreground));
+  color: hsl(var(--card-foreground-red));
 }
 .redshield-text-destructive-foreground {
-  color: hsl(var(--destructive-foreground));
+  color: hsl(var(--destructive-foreground-red));
 }
 .redshield-text-muted-foreground {
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--muted-foreground-red));
 }
 .redshield-text-primary {
-  color: hsl(var(--primary));
+  color: hsl(var(--primary-red));
 }
 .redshield-text-primary-foreground {
-  color: hsl(var(--primary-foreground));
+  color: hsl(var(--primary-foreground-red));
 }
 .redshield-text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 .redshield-text-secondary-foreground {
-  color: hsl(var(--secondary-foreground));
+  color: hsl(var(--secondary-foreground-red));
 }
 .redshield-text-slate-400 {
   --tw-text-opacity: 1;
@@ -422,7 +421,7 @@ body {
     var(--tw-shadow);
 }
 .redshield-ring-offset-background {
-  --tw-ring-offset-color: hsl(var(--background));
+  --tw-ring-offset-color: hsl(var(--background-red));
 }
 .redshield-transition-all {
   transition-property: all;
@@ -466,25 +465,25 @@ body {
   font-weight: 500;
 }
 .placeholder\:redshield-text-muted-foreground::-moz-placeholder {
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--muted-foreground-red));
 }
 .placeholder\:redshield-text-muted-foreground::placeholder {
-  color: hsl(var(--muted-foreground));
+  color: hsl(var(--muted-foreground-red));
 }
 .hover\:redshield-bg-accent:hover {
   background-color: hsl(var(--accent));
 }
 .hover\:redshield-bg-destructive\/90:hover {
-  background-color: hsl(var(--destructive) / 0.9);
+  background-color: hsl(var(--destructive-red) / 0.9);
 }
 .hover\:redshield-bg-primary\/90:hover {
-  background-color: hsl(var(--primary) / 0.9);
+  background-color: hsl(var(--primary-red) / 0.9);
 }
 .hover\:redshield-bg-secondary\/80:hover {
   background-color: hsl(var(--secondary) / 0.8);
 }
 .hover\:redshield-text-accent-foreground:hover {
-  color: hsl(var(--accent-foreground));
+  color: hsl(var(--accent-foreground-red));
 }
 .hover\:redshield-underline:hover {
   text-decoration-line: underline;
@@ -502,7 +501,7 @@ body {
     var(--tw-shadow, 0 0 #0000);
 }
 .focus-visible\:redshield-ring-ring:focus-visible {
-  --tw-ring-color: hsl(var(--ring));
+  --tw-ring-color: hsl(var(--ring-red));
 }
 .focus-visible\:redshield-ring-offset-2:focus-visible {
   --tw-ring-offset-width: 2px;
@@ -523,10 +522,10 @@ body {
   opacity: 0.7;
 }
 .data-\[state\=active\]\:redshield-bg-background[data-state=active] {
-  background-color: hsl(var(--background));
+  background-color: hsl(var(--background-red));
 }
 .data-\[state\=active\]\:redshield-text-foreground[data-state=active] {
-  color: hsl(var(--foreground));
+  color: hsl(var(--foreground-red));
 }
 .data-\[state\=active\]\:redshield-shadow-sm[data-state=active] {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -535,5 +534,13 @@ body {
     var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000),
     var(--tw-shadow);
+}
+:is(.redshield-dark .dark\:redshield-bg-black) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+:is(.redshield-dark .dark\:redshield-text-white) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 /*# sourceMappingURL=tailwind.css.map */
