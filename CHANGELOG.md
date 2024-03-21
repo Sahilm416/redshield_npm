@@ -1,5 +1,12 @@
 # redshield0
 
+## 0.4.19
+
+### Patch Changes
+
+- 6d1c3e4: solved css conflict
+- c06cf9a: remove dark class
+
 ## 0.4.9
 
 ### Patch Changes
