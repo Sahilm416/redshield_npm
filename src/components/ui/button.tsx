@@ -5,19 +5,19 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "../../lib/utils"
 
 const buttonVariants = cva(
-  "redshield-inline-flex redshield-items-center redshield-justify-center redshield-whitespace-nowrap redshield-rounded-md redshield-text-sm redshield-font-medium redshield-ring-offset-background redshield-transition-colors redshield-focus-visible:outline-none redshield-focus-visible:ring-2 redshield-focus-visible:ring-ring redshield-focus-visible:ring-offset-2 redshield-disabled:pointer-events-none redshield-disabled:opacity-50",
+  "redshield-inline-flex redshield-items-center redshield-justify-center redshield-whitespace-nowrap redshield-rounded-md redshield-text-sm redshield-font-medium redshield-ring-offset-background redshield-transition-colors focus-visible:redshield-outline-none focus-visible:redshield-ring-2 focus-visible:redshield-ring-ring focus-visible:redshield-ring-offset-2 disabled:redshield-pointer-events-none disabled:redshield-opacity-50",
   {
     variants: {
       variant: {
-        default: "redshield-bg-primary redshield-text-primary-foreground redshield-hover:bg-primary/90",
+        default: "redshield-bg-primary redshield-text-primary-foreground hover:redshield-bg-primary/90",
         destructive:
-          "redshield-bg-destructive redshield-text-destructive-foreground redshield-hover:bg-destructive/90",
+          "redshield-bg-destructive redshield-text-destructive-foreground hover:redshield-bg-destructive/90",
         outline:
-          "redshield-border redshield-border-input redshield-bg-background redshield-hover:bg-accent redshield-hover:text-accent-foreground",
+          "redshield-border redshield-border-input redshield-bg-background hover:redshield-bg-accent hover:redshield-text-accent-foreground",
         secondary:
-          "redshield-bg-secondary redshield-text-secondary-foreground redshield-hover:bg-secondary/80",
-        ghost: "redshield-hover:bg-accent redshield-hover:text-accent-foreground",
-        link: "redshield-text-primary redshield-underline-offset-4 redshield-hover:underline",
+          "redshield-bg-secondary redshield-text-secondary-foreground hover:redshield-bg-secondary/80",
+        ghost: "hover:redshield-bg-accent hover:redshield-text-accent-foreground",
+        link: "redshield-text-primary redshield-underline-offset-4 hover:redshield-underline",
       },
       size: {
         default: "redshield-h-10 redshield-px-4 redshield-py-2",
