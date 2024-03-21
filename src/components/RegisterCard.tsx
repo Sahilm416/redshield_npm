@@ -30,7 +30,7 @@ export default function RegisterCard({
 
   return (
     <>
-      <Card className="redshield-dark:bg-gray-900/20 redshield-bg-white redshield-px-2 redshield-h-auto redshield-shadow-lg redshield-rounded-none">
+      <Card className="bg-gray-900/20 redshield-bg-white redshield-px-2 redshield-h-auto redshield-shadow-lg redshield-rounded-none">
         <CardHeader>
           <CardTitle>Register to {project_name}</CardTitle>
           <CardDescription>redis based auth</CardDescription>
@@ -129,9 +129,9 @@ const Form2 = ({
     <>
       <form action={sendData}>
         <CardContent className="redshield-flex redshield-flex-col redshield-gap-3">
-          <p className="redshield-text-sm redshield-text-slate-400 redshield-dark:text-slate-500">
+          <p className="redshield-text-sm redshield-text-slate-400 text-slate-500">
             enter the code sent to <br />
-            <span className="redshield-text-slate-700 redshield-dark:text-slate-300">
+            <span className="redshield-text-slate-700 text-slate-300">
               {email}
             </span>{" "}
           </p>

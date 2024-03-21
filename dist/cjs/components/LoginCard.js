@@ -60,10 +60,10 @@ function LoginCard({ project_name, project_id }) {
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, forgotPassword ? /* @__PURE__ */ import_react.default.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: "redshield-dark:bg-gray-900/20 redshield-bg-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F]" }, /* @__PURE__ */ import_react.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ import_react.default.createElement(
+  return /* @__PURE__ */ import_react.default.createElement(import_react.default.Fragment, null, forgotPassword ? /* @__PURE__ */ import_react.default.createElement(ForgotPasswordComponent, { setForgotPassword }) : /* @__PURE__ */ import_react.default.createElement(import_card.Card, { className: "bg-gray-900/20 redshield-bg-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB] border-[#1F1F1F]" }, /* @__PURE__ */ import_react.default.createElement("form", { action: sendData }, /* @__PURE__ */ import_react.default.createElement(import_card.CardHeader, null, /* @__PURE__ */ import_react.default.createElement(import_card.CardTitle, null, "Login to ", project_name)), /* @__PURE__ */ import_react.default.createElement(import_card.CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "email" }, "Email"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: "redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm",
+      className: "redshield-border-[#EBEBEB] border-[#1F1F1F] redshield-rounded-sm",
       autoFocus: true,
       placeholder: "enter email",
       type: "email",
@@ -74,7 +74,7 @@ function LoginCard({ project_name, project_id }) {
   ), /* @__PURE__ */ import_react.default.createElement(import_label.Label, { htmlFor: "password" }, "Password"), /* @__PURE__ */ import_react.default.createElement(
     import_input.Input,
     {
-      className: "redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm",
+      className: "redshield-border-[#EBEBEB] border-[#1F1F1F] redshield-rounded-sm",
       placeholder: "enter password",
       type: "password",
       name: "password",

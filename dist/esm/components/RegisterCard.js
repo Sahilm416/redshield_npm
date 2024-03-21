@@ -22,7 +22,7 @@ function RegisterCard({
 }) {
   const [formCount, setFormCount] = useState(1);
   const [email, setEmail] = useState("");
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Card, { className: "redshield-dark:bg-gray-900/20 redshield-bg-white redshield-px-2 redshield-h-auto redshield-shadow-lg redshield-rounded-none" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Register to ", project_name), /* @__PURE__ */ React.createElement(CardDescription, null, "redis based auth")), formCount === 1 ? /* @__PURE__ */ React.createElement(Form1, { setFormCount, setEmail }) : formCount === 2 ? /* @__PURE__ */ React.createElement(Form2, { setFormCount, email }) : /* @__PURE__ */ React.createElement(Form3, { email, project_id })));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Card, { className: "bg-gray-900/20 redshield-bg-white redshield-px-2 redshield-h-auto redshield-shadow-lg redshield-rounded-none" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Register to ", project_name), /* @__PURE__ */ React.createElement(CardDescription, null, "redis based auth")), formCount === 1 ? /* @__PURE__ */ React.createElement(Form1, { setFormCount, setEmail }) : formCount === 2 ? /* @__PURE__ */ React.createElement(Form2, { setFormCount, email }) : /* @__PURE__ */ React.createElement(Form3, { email, project_id })));
 }
 const Form1 = ({
   setFormCount,
@@ -81,7 +81,7 @@ const Form2 = ({
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ React.createElement("p", { className: "redshield-text-sm redshield-text-slate-400 redshield-dark:text-slate-500" }, "enter the code sent to ", /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("span", { className: "redshield-text-slate-700 redshield-dark:text-slate-300" }, email), " "), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-3" }, /* @__PURE__ */ React.createElement("p", { className: "redshield-text-sm redshield-text-slate-400 text-slate-500" }, "enter the code sent to ", /* @__PURE__ */ React.createElement("br", null), /* @__PURE__ */ React.createElement("span", { className: "redshield-text-slate-700 text-slate-300" }, email), " "), /* @__PURE__ */ React.createElement(
     Input,
     {
       className: "redshield-rounded-none",

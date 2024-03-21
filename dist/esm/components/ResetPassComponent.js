@@ -50,7 +50,7 @@ const ResetPass = ({ data }) => {
     }
     setLoading(false);
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(Card, { className: "redshield-w-[90vw] redshield-max-w-[450px] redshield-shadow-lg redshield-rounded-none redshield-bg-white redshield-dark:bg-gray-900/20" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Change Password")), /* @__PURE__ */ React.createElement(CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-4" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "resetpass" }, "New password"), /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("form", { action: sendData }, /* @__PURE__ */ React.createElement(Card, { className: "redshield-w-[90vw] redshield-max-w-[450px] redshield-shadow-lg redshield-rounded-none redshield-bg-white bg-gray-900/20" }, /* @__PURE__ */ React.createElement(CardHeader, null, /* @__PURE__ */ React.createElement(CardTitle, null, "Change Password")), /* @__PURE__ */ React.createElement(CardContent, { className: "redshield-flex redshield-flex-col redshield-gap-4" }, /* @__PURE__ */ React.createElement(Label, { htmlFor: "resetpass" }, "New password"), /* @__PURE__ */ React.createElement(
     Input,
     {
       required: true,

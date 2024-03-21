@@ -21,7 +21,7 @@ export default async function AuthPage() {
   return (
     <div>
       <Tabs className="redshield-w-[90vw] redshield-max-w-[400px]" defaultValue="login">
-        <TabsList className="redshield-grid redshield-dark:bg-slate-900 redshield-w-full redshield-grid-cols-2 redshield-rounded-md">
+        <TabsList className="redshield-grid bg-slate-900 redshield-w-full redshield-grid-cols-2 redshield-rounded-md">
           <TabsTrigger className="redshield-rounded-none" value="login">
             Login
           </TabsTrigger>

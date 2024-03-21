@@ -68,7 +68,7 @@ const ResetPass = ({ data }: { data: paramTypes }) => {
   return (
     <>
       <form action={sendData}>
-        <Card className="redshield-w-[90vw] redshield-max-w-[450px] redshield-shadow-lg redshield-rounded-none redshield-bg-white redshield-dark:bg-gray-900/20">
+        <Card className="redshield-w-[90vw] redshield-max-w-[450px] redshield-shadow-lg redshield-rounded-none redshield-bg-white bg-gray-900/20">
           <CardHeader>
             <CardTitle>Change Password</CardTitle>
           </CardHeader>

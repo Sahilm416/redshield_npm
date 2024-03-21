@@ -41,7 +41,7 @@ export default function LoginCard({ project_name, project_id }: { project_name: 
       {forgotPassword ? (
         <ForgotPasswordComponent setForgotPassword={setForgotPassword} />
       ) : (
-        <Card className="redshield-dark:bg-gray-900/20 redshield-bg-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F]">
+        <Card className="bg-gray-900/20 redshield-bg-white redshield-p-2 redshield-shadow-lg redshield-rounded-md redshield-border-[#EBEBEB] border-[#1F1F1F]">
           <form action={sendData}>
             <CardHeader>
               <CardTitle>Login to {project_name}</CardTitle>
@@ -49,7 +49,7 @@ export default function LoginCard({ project_name, project_id }: { project_name: 
             <CardContent className="redshield-flex redshield-flex-col redshield-gap-3">
               <Label htmlFor="email">Email</Label>
               <Input
-                className="redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm"
+                className="redshield-border-[#EBEBEB] border-[#1F1F1F] redshield-rounded-sm"
                 autoFocus
                 placeholder="enter email"
                 type="email"
@@ -59,7 +59,7 @@ export default function LoginCard({ project_name, project_id }: { project_name: 
               />
               <Label htmlFor="password">Password</Label>
               <Input
-                className="redshield-border-[#EBEBEB] redshield-dark:border-[#1F1F1F] redshield-rounded-sm"
+                className="redshield-border-[#EBEBEB] border-[#1F1F1F] redshield-rounded-sm"
                 placeholder="enter password"
                 type="password"
                 name="password"
