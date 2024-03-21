@@ -5,9 +5,6 @@ export declare const getProject: () => Promise<{
     project_name: any;
     project_id: any;
 }>;
-export declare const verifyJWT: ({ token }: {
-    token: string | undefined;
-}) => Promise<any>;
 export declare const getSession: () => Promise<{
     status: boolean;
     message: string;

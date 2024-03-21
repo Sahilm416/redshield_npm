@@ -47,7 +47,15 @@ const getProject = async () => {
     };
   }
 };
-const verifyJWT = async ({ token }) => {
+const getSession = async () => {
+  const store = cookies();
+  const token = store.get("_auth_token")?.value;
+  if (!token) {
+    return {
+      status: false,
+      message: "session token not found"
+    };
+  }
   try {
     const jwt_secret = process.env.JWT_SECRET;
     const res = await fetch("https://redshield.vercel.app/api/service/verify", {
@@ -62,30 +70,10 @@ const verifyJWT = async ({ token }) => {
       })
     });
     const response = await res.json();
-    return response;
-  } catch (error) {
-    console.log(error);
     return {
-      status: false,
-      message: "something went wrong"
-    };
-  }
-};
-const getSession = async () => {
-  const store = cookies();
-  const token = store.get("_auth_token")?.value;
-  if (!token) {
-    return {
-      status: false,
-      message: "session token not found"
-    };
-  }
-  try {
-    const res = await verifyJWT({ token });
-    return {
-      status: res.status,
-      message: res.message,
-      data: res.data
+      status: response.status,
+      message: response.message,
+      data: response.data
     };
   } catch (error) {
     console.log("error verifying token: " + error);
@@ -110,7 +98,6 @@ export {
   getEnv,
   getProject,
   getSession,
-  resetPassword,
-  verifyJWT
+  resetPassword
 };
 //# sourceMappingURL=auth.js.map
