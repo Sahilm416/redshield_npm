@@ -14,10 +14,5 @@ const esm: Options = {
   format: 'esm',
 };
 
-const cjs: Options = {
-  ...common,
-  format: 'cjs',
-  outDir: './dist/cjs', // Specify the output directory for CJS format
-};
 
-export default [esm, cjs];
+export default [esm];

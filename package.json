@@ -6,13 +6,11 @@
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
+      "import": "./dist/esm/index.js"
     },
     "./ui": {
       "types": "./dist/types/components/index.d.ts",
-      "import": "./dist/esm/components/index.js",
-      "require": "./dist/cjs/components/index.js"
+      "import": "./dist/esm/components/index.js"
     }
   },
   "scripts": {
