@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.23
+
+### Patch Changes
+
+- 62674ae: remove common js
+
 ## 0.4.22
 
 ### Patch Changes
