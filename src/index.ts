@@ -5,4 +5,7 @@ export {
   register,
   sendEmailVerificationCode,
   verifyVerificationCode,
+  resetPassword,
+  checkToken,
+  changePassword
 } from "./methods/additional";

@@ -29,5 +29,28 @@ export declare const register: ({ email, password }: Register) => Promise<{
     message: any;
 }>;
 export declare const logout: () => Promise<void>;
+export declare const resetPassword: ({ email, site, }: {
+    email: string;
+    site: string;
+}) => Promise<{
+    status: boolean;
+    message: string;
+}>;
+export declare const checkToken: ({ token }: {
+    token: string;
+}) => Promise<{
+    status: boolean;
+    message: string;
+    email: string;
+    token: string;
+}>;
+export declare const changePassword: ({ email, password, token, }: {
+    email: string;
+    password: string;
+    token: string;
+}) => Promise<{
+    status: boolean;
+    message: string;
+}>;
 export {};
 //# sourceMappingURL=additional.d.ts.map

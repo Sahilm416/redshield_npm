@@ -18,10 +18,13 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var src_exports = {};
 __export(src_exports, {
+  changePassword: () => import_additional.changePassword,
+  checkToken: () => import_additional.checkToken,
   getSession: () => import_auth.getSession,
   login: () => import_additional.login,
   logout: () => import_additional.logout,
   register: () => import_additional.register,
+  resetPassword: () => import_additional.resetPassword,
   sendEmailVerificationCode: () => import_additional.sendEmailVerificationCode,
   verifyVerificationCode: () => import_additional.verifyVerificationCode
 });
@@ -30,10 +33,13 @@ var import_auth = require("./actions/auth");
 var import_additional = require("./methods/additional");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  changePassword,
+  checkToken,
   getSession,
   login,
   logout,
   register,
+  resetPassword,
   sendEmailVerificationCode,
   verifyVerificationCode
 });

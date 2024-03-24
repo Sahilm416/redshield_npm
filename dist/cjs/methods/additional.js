@@ -19,9 +19,12 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var additional_exports = {};
 __export(additional_exports, {
+  changePassword: () => changePassword,
+  checkToken: () => checkToken,
   login: () => login,
   logout: () => logout,
   register: () => register,
+  resetPassword: () => resetPassword,
   sendEmailVerificationCode: () => sendEmailVerificationCode,
   verifyVerificationCode: () => verifyVerificationCode
 });
@@ -29,6 +32,7 @@ module.exports = __toCommonJS(additional_exports);
 var import_login = require("../actions/login");
 var import_register = require("../actions/register");
 var import_auth = require("../actions/auth");
+var import_forgotPassword = require("../actions/forgotPassword");
 const login = async ({ email, password }) => {
   const { project_id } = await (0, import_auth.getProject)();
   const res = await (0, import_login.LoginUser)({
@@ -64,11 +68,37 @@ const logout = async () => {
   await (0, import_auth.LogOut)();
   return;
 };
+const resetPassword = async ({
+  email,
+  site
+}) => {
+  const res = await (0, import_forgotPassword.sendResetPasswordLink)({ email, url: site });
+  return res;
+};
+const checkToken = async ({ token }) => {
+  const res = await (0, import_forgotPassword.checkResetPasswordToken)({ token });
+  return res;
+};
+const changePassword = async ({
+  email,
+  password,
+  token
+}) => {
+  const res = await (0, import_forgotPassword.changePassword)({
+    email,
+    password,
+    token
+  });
+  return res;
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  changePassword,
+  checkToken,
   login,
   logout,
   register,
+  resetPassword,
   sendEmailVerificationCode,
   verifyVerificationCode
 });

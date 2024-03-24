@@ -4,13 +4,19 @@ import {
   logout,
   register,
   sendEmailVerificationCode,
-  verifyVerificationCode
+  verifyVerificationCode,
+  resetPassword,
+  checkToken,
+  changePassword
 } from "./methods/additional";
 export {
+  changePassword,
+  checkToken,
   getSession,
   login,
   logout,
   register,
+  resetPassword,
   sendEmailVerificationCode,
   verifyVerificationCode
 };

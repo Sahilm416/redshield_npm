@@ -2,6 +2,11 @@
 import { LoginUser } from "../actions/login";
 import { registerUser, sendCode, verifyCode } from "../actions/register";
 import { getProject, LogOut } from "../actions/auth";
+import {
+  sendResetPasswordLink,
+  checkResetPasswordToken,
+  changePassword as changePass,
+} from "../actions/forgotPassword";
 
 type Login = {
   email: string;
@@ -61,4 +66,40 @@ export const register = async ({ email, password }: Register) => {
 export const logout = async () => {
   await LogOut();
   return;
+};
+
+//send reset password email
+export const resetPassword = async ({
+  email,
+  site,
+}: {
+  email: string;
+  site: string;
+}) => {
+  const res = await sendResetPasswordLink({ email: email, url: site });
+  return res;
+};
+
+//check the token
+export const checkToken = async ({ token }: { token: string }) => {
+  const res = await checkResetPasswordToken({ token: token });
+  return res;
+};
+
+//change password
+export const changePassword = async ({
+  email,
+  password,
+  token,
+}: {
+  email: string;
+  password: string;
+  token: string;
+}) => {
+  const res = await changePass({
+    email: email,
+    password: password,
+    token: token,
+  });
+  return res;
 };
