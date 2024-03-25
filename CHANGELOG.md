@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.25
+
+### Patch Changes
+
+- e8bf0b6: use preflight in tailwind
+
 ## 0.4.24
 
 ### Patch Changes
