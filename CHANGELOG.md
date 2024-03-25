@@ -1,5 +1,11 @@
 # redshield0
 
+## 0.4.24
+
+### Patch Changes
+
+- 6bd84e0: list files and change build command
+
 ## 0.4.23
 
 ### Patch Changes
