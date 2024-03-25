@@ -13,12 +13,12 @@
       "import": "./dist/esm/components/index.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "pnpm clean && tsup && pnpm build:declarations",
+    "build": "tsup && pnpm build:declarations",
     "build:declarations": "npx tsc -p tsconfig.declarations.json",
-    "clean": "rmdir /s /q dist",
-    "ubuild": "tsup && pnpm build:udeclarations",
-    "build:udeclarations": "tsc -p tsconfig.declarations.json",
     "dev": "tsup --watch",
     "lint": "tsc"
   },
